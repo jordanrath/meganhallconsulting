@@ -1,13 +1,260 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans+JP&family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans+JP:wght@100;400&family=Open+Sans:wght@500&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  background-color: #deeaee;
+  /* width: 100vw; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.main {
+  margin: 0;
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* ------------------------- Navbar ------------------------- */
+.nav-banner {
+  height: 800px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 1;
+  filter: grayscale(85%);
+  /* box-shadow: inset 0 0 0 1px rgb(255 255 255 / 20%), 0 2px 4px rgb(17 20 24 / 40%), 0 5px 12px 3px rgb(17 20 24 / 40%); */
+}
+
+.image-text {
+  width: 625px;
+  color: white;
+  font-size: 25px;
+  text-align: left;
+  text-shadow: 2px 2px black;
+  text-transform: uppercase;
+  position: absolute;
+  top: 25%;
+  left: 55%;
+  border-top: 5px solid #eea29a;
+  opacity: .7;
+}
+
+.nav {
+  position: absolute;
+  bottom: 92%;
+  width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+  /* background-color: #b1cbbb; */
+  overflow: hidden;
+  color: white;
+  display: flex;
+  /* justify-content: center; */
+  align-items: stretch;
+  height: 80px;
+  gap: 15%;
+  /* padding: 0 35%; */
+  font-family: 'Noto Sans JP', sans-serif;
+  text-shadow: 1px 1px black;
+}
+
+.nav-list {
+  display: inherit;
+}
+
+.site-title-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.site-title {
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  width: 350px;
+}
+
+.site-title-quote {
+  font-weight: 100;
+  font-size: .75rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0;
+}
+
+.nav ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 18px;
+  gap: 1rem;
+}
+
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+}
+
+.nav li:hover,
+.nav a.active {
+  color: #c94c4c;
+  text-decoration: overline #deeaee;
+  /* text-shadow: 1px .75px 	black; */
+  /* background-color: #eea29a;
+  border-top: 2px solid #deeaee; */
+}
+
+/* ------------------------- Home ------------------------- */
+.home-container {
+  margin: auto;
+  
+  /* border: 2px solid white; */
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* row-gap: 5rem; */
+  /* padding-top: 150px;
+  padding-bottom: 180px; */
+  /* background-color: #eea29a; */
+}
+
+/* .nav-banner {
+  height: 1000px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 1;
+  filter: grayscale(85%);
+} */
+
+.home-booking {
+  width: 100%;
+  padding: 150px 20% 180px 20%;
+  display: inherit;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  row-gap: 5rem;
+  background-color: #deeaee;
+}
+
+.home-booking h1 {
+  padding-bottom: 10px;
+  font-size: 50px;
+}
+
+.home-booking h2 {
+  padding-bottom: 10px;
+  font-size: 25px;
+}
+
+.btn {
+  font-weight: 700;
+  color: black;
+  border: none;
+  padding: 15px;
+  background-color: #eea29a;
+  border-top: 4px solid #b1cbbb;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-top: 4px solid #eea29a;
+  background-color: #b1cbbb;
+}
+
+.coaching-info-container {
+  width: 100%;
+  padding: 150px 20% 180px 20%;
+  background-color: #b1cbbb;
+  text-align: left;
+  display: flex;
+  gap: 50px;
+}
+
+.coaching-info-text {
+  width: 50%;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.coaching-info-list {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.coaching-info-list ul {
+  list-style-type: none;
+  font-size: 18px;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.svg-icon {
+  font-size: 30px;
+  padding-right: 20px;
+}
+
+.introduction-container {
+  width: 100%;
+  padding: 150px 20% 180px 20%;
+  background-color: #deeaee;
+  text-align: start;
+  display: flex;
+  gap: 50px;
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.intro-text h2 {
+  font-family: 'Dancing Script', cursive;
+  display: inherit;
+  padding-bottom: 10px;
+}
+
+.intro-img {
+  width: 400px;
+  max-height: 585px;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 20%), 0 4px 8px rgb(17 20 24 / 40%), 0 18px 46px 6px rgb(17 20 24 / 40%);
 }
