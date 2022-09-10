@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Testimonials from '../components/Testimonials';
+import Testimonials from '../components/section/Testimonials';
 
 const Home = () => {
   return (
-    <section className='home-section'>
+    <>      
     <div className='home-container'> 
       <div className='home-top-container'>
         <h1>Metabolic Health</h1>
@@ -26,9 +26,10 @@ const Home = () => {
             </li>
           </ul>
         </div>
+        <div className='svg-container'>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 10"><path fill="#788989" fill-opacity="1" d="M -1 33 L -1 33 C 126 -6 298 27 388 36 C 530 55 577 55 665 43 C 816 26 1068 -27 1440 44 L 1441 45 L 1440 0 L 1360 0 C 1280 0 1120 0 960 0 C 800 0 640 0 480 0 C 320 0 160 0 80 0 L 0 0 Z"></path></svg>
+        </div>
       </div>
-      <div className='nav-image-text'>
-        <h1>Teaching people of all health and abilities to live their fullest life</h1>
       </div>
       <div className='home-booking-container'>
         <div className='home-booking'>
@@ -79,8 +80,7 @@ const Home = () => {
           </div>     
       </div>
       <Testimonials />
-    </div>
-    </section>
+    </>
   )
 }
 

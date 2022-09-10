@@ -5,10 +5,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Schedule from './pages/Schedule';
 import Contact from './pages/Contact';
-import Testimonials from './components/Testimonials';
+import Testimonials from './components/section/Testimonials';
 import Footer from './components/Footer';
 import Policies from './pages/Policies';
-import './components/FontAwesomeIcons';
+import './components/controls/FontAwesomeIcons';
 
 function Main() {
   return (

@@ -1,16 +1,13 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
+import SvgBanner from './SvgBanner';
 
 
 const Navbar = () => {
   return (
-    <section className='nav-section'>
-     <div className='nav-image'>
-      <div className='nav-banner-container'>
-        <img src='/images/IMG_7227.jpg' alt='Colorado mountains' className='nav-banner'/>
-      </div>
+    <>
+      <SvgBanner />
       <nav className='nav'>
-        
             <ul>
               <li className='site-title-container'>
                 <Link to='/' className='site-title'>Megan Hall Consulting</Link>
@@ -30,8 +27,7 @@ const Navbar = () => {
               </li>
             </ul>
       </nav>
-    </div>
-    </section>
+    </>
   )
 }
 
