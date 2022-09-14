@@ -4,10 +4,16 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100vh;
+}
+
 body {
   margin: 0;
   background-color: whitesmoke;
   /* width: 100vw; */
+  height: 100%;
+  min-height: 100%;
 }
 
 h1,
@@ -23,6 +29,9 @@ p {
 }
 
 .main {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
   margin: 0;
   text-align: center;
   font-family: 'Italiana', serif;
@@ -36,12 +45,36 @@ p {
   bottom: 89%;
   width: 100%;
   overflow: hidden;
-  color: white;
+  color: #262626;
   display: flex;
-  height: 120px;
+  height: 100px;
+  font-family: 'Noto Sans JP', sans-serif;
+  z-index: 100;
+}
+
+/* .nav.sticky {
+  position: sticky;
+  overflow: hidden;
+  color: #262626;
+  display: flex;
+  height: 100px;
   font-family: 'Noto Sans JP', sans-serif;
   text-shadow: 1px 1px black;
   z-index: 100;
+} */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #236099;
+  background-color: whitesmoke;
+  color: #262626;
+  text-shadow: none;
+}
+
+.nav.sticky .site-title-container {
+  padding-top: 10px;
 }
 
 .nav-section {
@@ -72,18 +105,20 @@ p {
   display: flex;
   justify-content: center;
   font-family: 'Dancing Script', cursive;
-  font-size: 55px;
+  font-size: 50px;
+  font-weight: 200;
   width: 500px;
+  padding-top: 10px;
 }
 
 .site-title-quote {
-  font-weight: 100;
-  font-size: 20px;
+  font-weight: 900;
+  font-size: 15px;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 0;
   padding-right: 25px;
+  padding-bottom: 40px;
 }
 
 .nav ul {
@@ -108,20 +143,39 @@ p {
 
 .nav li:hover,
 .nav a.active {
-  color: #deeaee;
-  text-decoration: overline #bf7474;
+  color: #236099;
+  text-decoration: overline #262626;
 }
 
 .nav li.site-title-container:hover {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
 /* ------------------------- Home ------------------------- */
+.view-shadow {
+  position: fixed;
+  width: calc(100vw - 10px);
+  height: 100vh;
+  top: 0;
+  z-index: 1999;
+  pointer-events: none;
+  box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, .3);
+  /* border-width: 200px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      red, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%; */
+}
+
 .home-container {
   margin: auto;
   position: relative;
   max-width: 100%;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -135,8 +189,12 @@ p {
   padding-top: 100px;
   padding-bottom: 100px;
   /* padding-bottom: 100px; */
-  color: #262626;
+  /* color: #262626; */
+  color: white;
   background-color: #788989;
+  /*bbd4d1*/
+  background-color: #a39cb4;
+  background-color: #bf7474;
 }
 
 .svg-container-bottom {
@@ -148,7 +206,23 @@ p {
 .svg-container-bottom svg {
   display: block;
   width: 100%;
-  height: 400px; 
+  height: 100px; 
+}
+
+.home-list span {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-icon-public-top {
+  width: 55px;
+  margin: 0;
+  font-size: 20px;
+  /* padding-bottom: 20px;
+  padding-top: 20px; */
+  display: flex;
 }
 
 
@@ -223,6 +297,7 @@ p {
 
 .home-booking-container {
   margin-top: 150px;
+  margin-bottom: 150px;
   width: 100%;
   padding: 150px 25% 150px 25%;
   display: flex;
@@ -315,7 +390,6 @@ p {
   flex-grow: 1;
   flex-shrink: 1;
   width: 610px;
-  height: 350px;
   box-shadow: inset 0 0 0 1px rgb(255 255 255 / 20%), 0 4px 8px rgb(17 20 24 / 40%), 0 9px 23px 3px rgb(17 20 24 / 40%);
   border-radius: 6px;
   z-index: 1;
@@ -352,7 +426,7 @@ p {
   width: 400px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
 }
 
 .btn-cont h3 {
@@ -365,21 +439,23 @@ p {
   color: #262626;
   border: none;
   padding: 15px;
-  background-color: #9DB189;
-  border-top: 4px solid #bf7474;
+  background-color: #bf7474;
+  border-top: 4px solid #9DB189;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .btn:hover {
   border-top: 4px solid #9DB189;
-  background-color: #bf7474;
+  background-color: #9DB189;
+  color: white;
 }
 
 .coaching-info-container {
   /* margin-top: 100px; */
   width: 100%;
-  padding: 30px 20% 100px 20%;
-  background-color: #bf7474;
+  padding: 100px 15% 100px 15%;
+  background-color: #74BFBF;
   text-align: left;
   display: flex;
   gap: 50px;
@@ -394,13 +470,13 @@ p {
 .svg-coaching-info-container-top svg {
   display: block;
   width: 100%;
-  height: 400px;
+  height: 100px;
 }
 
 .svg-coaching-info-container-bottom svg {
   display: block;
   width: 100%;
-  height: 400px; 
+  height: 100px; 
 }
 
 .coaching-info-list {
@@ -408,7 +484,8 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  color: #262626;
+  color: white;
+  /* color: #262626; */
   gap: 100px;
 }
 
@@ -447,12 +524,36 @@ p {
   width: 100%;
   margin: 0;
   font-size: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   display: flex;
 }
 
+.svg-icon-public-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* will work if I make it svg */
+/* img svg path {
+  stroke-width: 2px;
+  stroke: red;
+} */
+
+.svg-icon-public {
+  width: 50px;
+  margin: 0;
+  font-size: 10px;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.svg-icon-public-container img {
+  filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(257deg) brightness(110%) contrast(102%);
+}
+
 .introduction-container {
-  margin-top: 100px ;
+  margin-top: 150px;
+  margin-bottom: 150px;
   position: relative;
   width: 100%;
   padding: 150px 25% 150px 25%;
@@ -607,8 +708,16 @@ p {
 }
 
 /* ------------------------- Footer ------------------------- */
+.footer-section {
+ position: relative;
+ bottom: 0;
+}
+
 .footer-container {
+  /* margin-top: auto; */
   width: 100%;
+  /* position: absolute;
+  bottom: 0; */
   height: fit-content;
   display: flex;
   justify-content: space-between;
@@ -659,4 +768,195 @@ p {
 .disclosure:hover {
   cursor: pointer;
   color: #deeaee;
+}
+
+/* ------------------------- About Page ------------------------- */
+.about-container {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  position: relative;
+  width: 100%;
+  padding: 150px 15% 131px 15%;
+  background-color: whitesmoke;
+  text-align: start;
+  display: flex;
+  gap: 50px;
+  z-index: 1;
+  color: #262626;
+}
+
+.about-container:before {
+  content: '';
+  position: absolute;
+  width: 110%;
+  min-height: 75%;
+  margin: auto;
+  z-index: -1;
+  right: 0;
+  bottom: 13%;
+  background-color: #808978;
+  /* background-color: #75816b; */
+}
+
+.about-img {
+  /* width: 500px; */
+  height: 600px;
+  /* max-height: 585px; */
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 20%), 0 4px 8px rgb(17 20 24 / 40%), 0 18px 46px 6px rgb(17 20 24 / 40%);
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  line-height: 36px;
+}
+
+.about-text h2 {
+  font-family: 'Dancing Script', cursive;
+  display: inherit;
+  padding-bottom: 10px;
+}
+
+/* ------------------------- Schedule Page ------------------------- */
+.schedule-container {
+  margin-top: 150px;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.schedule-img {
+  width: 100%;
+  position: relative;
+  display: block;
+  right: .1%;
+}
+
+/* ------------------------- Contact Page ------------------------- */
+.contact-section {
+  margin-top: 150px;
+  margin-bottom: 379px;
+  padding: 150px 0 70px 0;
+}
+
+.contact-section:before {
+  content: '';
+  position: absolute;
+  width: 110%;
+  min-height: 45%;
+  margin: auto;
+  z-index: -1;
+  right: 0;
+  bottom: 40%;
+  background-color: #788089;
+}
+
+.contact-section h1 {
+  font-size: 50px;
+  color: white;
+  text-shadow: .5px .5px 2px #000000;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: center;
+  color: white;
+  box-shadow: .5px .5px 2px #000000;
+  margin: 25px auto 40px auto;
+  width: 110px;
+  border-top: solid;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 50%;
+  max-width: 500px;
+  min-width: 100px;
+  /* height: 500px; */
+  color: white;
+}
+
+input[type=text],
+input[type=email] {
+  background-color: white;
+  color: #262626;
+  margin: 0 0 3px;
+  padding: 10px 10px;
+  border: 0;
+  border-radius: 2px;
+}
+
+textarea[id=message] {
+  background-color: white;
+  color: #262626;
+  margin: 0 0 5px;
+  padding: 10px 10px;
+  /* height: 300px; */
+  min-height: 150px;
+  border: 0;
+  border-radius: 2px;
+  resize: none;
+}
+
+
+.btn-contact-container {
+  display: inherit;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: end;
+  width: 100%;
+}
+
+.btn-contact {
+  background-color: white;
+  color: #262626;
+  border: none;
+  border-top: 4px solid #bf7474;
+  border-radius: 2px;
+  margin: 5px 0 30px 0;
+  /* height: 30px; */
+  width: 100%;
+  max-width: 175px;
+  min-width: 100px;
+  padding: 10px 15px;
+  float: right;
+  cursor: pointer;
+}
+
+.btn-contact:hover {
+  /* border: 1px solid var(--black); */
+  color: white;
+  border-top: 2px solid #bf7474;
+  background-color: #bf7474;
+  color: var(--black);
+}
+
+/* ------------------------- Products Page ------------------------- */
+.products-container {
+  margin-top: 250px;
+  height: 100%;
+}
+
+.products-img {
+  margin-top: 50px;
+  width: 500px;
+  height: 800px;
+  margin-bottom: 11px;
+}
+
+/* ------------------------- Blog & Podcast Page ------------------------- */
+.blog-and-podcast-container {
+  margin-top: 250px;
+  height: 100%;
+}
+
+.blog-and-podcast-img {
+  margin-top: 50px;
+  width: 500px;
+  height: 800px;
+  margin-bottom: 11px;
 }

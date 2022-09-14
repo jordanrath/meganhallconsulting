@@ -3,10 +3,9 @@ import React from 'react'
 export const Schedule = () => {
   return (
     <>
-      <main>
-        <h2>Schedule a call</h2>
-        <p>Work with me content</p>
-      </main>
+      <div className='schedule-container'>
+      <img src='/images/example-schedule.png' alt='Megan and Cooper' className='schedule-img'/>
+      </div>
     </>
   )
 }
