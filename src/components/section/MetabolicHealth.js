@@ -3,6 +3,7 @@ import React from 'react'
 const MetabolicHealth = () => {
   return (
     <div className='home-top-container'>
+      <div className='home-top-text-container' data-aos="zoom-in-up">
         <h1>Metabolic Health</h1>
         <h5>THE COMMON THREAD BETWEEN</h5>
         <div className='home-list'>
@@ -23,6 +24,7 @@ const MetabolicHealth = () => {
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
             </li>
           </ul>
+        </div>
         </div>
       </div>
   )

@@ -33,16 +33,16 @@
 
 .svg-banner-content-container h1 {
     width: 555px;
-    color: white;
+    color: #262626;
     font-size: 35px;
     text-align: left;
-    text-shadow: 2px 2px black;
+    /* text-shadow: 2px 2px black; */
     text-transform: uppercase;
     position: absolute;
     top: 40%;
     left: 65%;
     border-top: 5px solid #bf7474;
-    opacity: .8;
+    opacity: .7;
 }
 
 .nav-banner {

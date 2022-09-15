@@ -5,7 +5,7 @@ const Testimonials = () => {
     <>
         <div className='testimonial-container'>
             <div className='testimonial-image-container'>
-                <img src='/images/IMG_7229.jpg' alt='Colorado mountains'/>
+                <img src='/images/nav-banner.jpg' alt='Colorado mountains'/>
             </div>
             <div className='testimonial-text'>
                 <h1>Testimonials</h1>

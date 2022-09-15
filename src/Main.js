@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import AOS from "aos";
+ import "aos/dist/aos.css";
+ import './components/controls/FontAwesomeIcons';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -10,14 +13,22 @@ import BlogAndPodcast from './pages/BlogAndPodcast';
 import Testimonials from './components/section/Testimonials';
 import Footer from './components/Footer';
 import Policies from './pages/Policies';
-import './components/controls/FontAwesomeIcons';
-import ScrollToTop from './components/ScrollToTop';
 
 function Main() {
+
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 1500,
+      offset: 200,
+      easing: 'ease-in-out-sine',
+    });
+    AOS.refresh()
+  }, []);
+
   return (
     <> 
       <div className="main">
-        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -33,7 +44,6 @@ function Main() {
           <Footer />
         </div>
       </div>
-      {/* <Navbar /> */}
     </>
   );
 }

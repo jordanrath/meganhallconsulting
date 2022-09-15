@@ -42,10 +42,10 @@ const Navbar = () => {
   return (
     <>
       {/* <SvgBanner /> */}
-      <nav className='nav' id='nav'>
+      <nav className='nav' id='nav' data-aos="fade-down">
             <ul>
               <li className='site-title-container'>
-                <Link to='/' className='site-title'>Megan Hall Consulting</Link>
+                <Link to='/' className='site-title'>Apeiron Health</Link>
                 <Link to='/' className='site-title-quote'>The applied science of healthy living</Link>
               </li>
               <li>

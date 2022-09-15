@@ -161,21 +161,13 @@ p {
   z-index: 1999;
   pointer-events: none;
   box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, .3);
-  /* border-width: 200px;
-  border-style: solid;
-  border-image: 
-    linear-gradient(
-      to bottom, 
-      red, 
-      rgba(0, 0, 0, 0)
-    ) 1 100%; */
 }
 
+/* ------------------------- Metabolic Health Section ------------------------- */
 .home-container {
   margin: auto;
   position: relative;
   max-width: 100%;
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -188,14 +180,12 @@ p {
   flex-direction: column;
   padding-top: 100px;
   padding-bottom: 100px;
-  /* padding-bottom: 100px; */
-  /* color: #262626; */
-  color: white;
-  background-color: #788989;
-  /*bbd4d1*/
-  background-color: #a39cb4;
-  background-color: #bf7474;
+  color: #262626;
+  background-color: #e6e5e1;
+  background-color: #f3e9d8;
 }
+
+/* //#788089 */
 
 .svg-container-bottom {
   z-index: 60;
@@ -220,21 +210,8 @@ p {
   width: 55px;
   margin: 0;
   font-size: 20px;
-  /* padding-bottom: 20px;
-  padding-top: 20px; */
   display: flex;
 }
-
-
-/* .svg-container {
-  position: absolute;
-  z-index: 60;
-}
-
-.svg-container svg {
-  width: 100%;
-  height: 670px;
-} */
 
 .home-top-container h1 {
   font-size: 55px;
@@ -289,22 +266,31 @@ p {
   flex-direction: column; 
 }
 
-/* .home-list p {
-  display: inherit;
-  justify-content: flex-end;
-  align-items: flex-end;
-} */
-
+/* ------------------------- Booking Section ------------------------- */
 .home-booking-container {
-  margin-top: 150px;
-  margin-bottom: 150px;
+  margin-top: 200px;
+  margin-bottom: 200px;
   width: 100%;
-  padding: 150px 25% 150px 25%;
+  padding: 0px 25% 0px 25%;
   display: flex;
   flex-grow: 1;
   background-color: whitesmoke;
   color: #262626;
+  z-index: 1;
 }
+
+/* .home-booking-container::before {
+  content: '';
+  position: absolute;
+  width: 68%;
+  min-height: 25%;
+  margin: auto;
+  z-index: -1;
+  right: 15%;
+  top: 15%;
+  border-radius: 8px;
+  background-color: #e6e5e1;
+} */
 
 .home-booking {
   display: inherit;
@@ -440,22 +426,22 @@ p {
   border: none;
   padding: 15px;
   background-color: #bf7474;
-  border-top: 4px solid #9DB189;
+  border-top: 4px solid #74BFBF;
   cursor: pointer;
   border-radius: 4px;
 }
 
 .btn:hover {
-  border-top: 4px solid #9DB189;
-  background-color: #9DB189;
+  border-top: 4px solid #74BFBF;
+  background-color: #74BFBF;
   color: white;
 }
 
+/* ------------------------- Coaching Information Section ------------------------- */
 .coaching-info-container {
-  /* margin-top: 100px; */
   width: 100%;
   padding: 100px 15% 100px 15%;
-  background-color: #74BFBF;
+  background-color: #bf7474;
   text-align: left;
   display: flex;
   gap: 50px;
@@ -485,7 +471,6 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   color: white;
-  /* color: #262626; */
   gap: 100px;
 }
 
@@ -510,14 +495,12 @@ p {
   display: flex;
   justify-content: center;
   font-size: 30px;
-  /* width: 700px; */
   padding-bottom: 30px;
 }
 
 .info-top p {
   font-size: 18px;
   line-height: 36px;
-  /* width: 300px; */
 }
 
 .svg-icon {
@@ -533,12 +516,6 @@ p {
   justify-content: center;
 }
 
-/* will work if I make it svg */
-/* img svg path {
-  stroke-width: 2px;
-  stroke: red;
-} */
-
 .svg-icon-public {
   width: 50px;
   margin: 0;
@@ -548,9 +525,15 @@ p {
 }
 
 .svg-icon-public-container img {
+  /* color: #262626; */
   filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(257deg) brightness(110%) contrast(102%);
 }
 
+.home-list img {
+  filter: unset;
+}
+
+/* ------------------------- Introduction Section ------------------------- */
 .introduction-container {
   margin-top: 150px;
   margin-bottom: 150px;
@@ -575,7 +558,7 @@ p {
   right: 25%;
   bottom: 23%;
   background-color: #f7ddbb;
-  /* background-color: #75816b; */
+  background-color: #f3e9d8;
 }
 
 .intro-text {
@@ -626,7 +609,6 @@ p {
 .testimonial-image-container img {
   width: 100%;
   height: 900px;
-  /* object-fit: cover; */
   opacity: .6;
   filter: grayscale(85%);
 }
@@ -640,7 +622,6 @@ p {
   padding-top: 150px;
   padding-bottom: 20px;
   color: white;
-  /* background-color: whitesmoke; */
   z-index: 60;
 }
 
@@ -671,20 +652,6 @@ p {
   z-index: 70;
 }
 
-/* .testimonials-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  background-attachment: fixed;
-  -webkit-filter: blur(12px);
-  filter: blur(12px);
-  transform: scale(2) translateY(20px);
-} */
-
 .testimonial {
   width: 15%;
   height: 400px;
@@ -696,8 +663,6 @@ p {
   color: white;
   text-shadow: 1px 1px black;
   z-index: 80;
-  /* background-color: #f7ddbb;
-  opacity: .4; */
 }
 
 .testimonial p {
@@ -714,10 +679,7 @@ p {
 }
 
 .footer-container {
-  /* margin-top: auto; */
   width: 100%;
-  /* position: absolute;
-  bottom: 0; */
   height: fit-content;
   display: flex;
   justify-content: space-between;
@@ -795,13 +757,10 @@ p {
   right: 0;
   bottom: 13%;
   background-color: #808978;
-  /* background-color: #75816b; */
 }
 
 .about-img {
-  /* width: 500px; */
   height: 600px;
-  /* max-height: 585px; */
   box-shadow: inset 0 0 0 1px rgb(255 255 255 / 20%), 0 4px 8px rgb(17 20 24 / 40%), 0 18px 46px 6px rgb(17 20 24 / 40%);
 }
 
@@ -876,7 +835,6 @@ p {
   width: 50%;
   max-width: 500px;
   min-width: 100px;
-  /* height: 500px; */
   color: white;
 }
 
@@ -895,7 +853,6 @@ textarea[id=message] {
   color: #262626;
   margin: 0 0 5px;
   padding: 10px 10px;
-  /* height: 300px; */
   min-height: 150px;
   border: 0;
   border-radius: 2px;
@@ -918,7 +875,6 @@ textarea[id=message] {
   border-top: 4px solid #bf7474;
   border-radius: 2px;
   margin: 5px 0 30px 0;
-  /* height: 30px; */
   width: 100%;
   max-width: 175px;
   min-width: 100px;
@@ -928,7 +884,6 @@ textarea[id=message] {
 }
 
 .btn-contact:hover {
-  /* border: 1px solid var(--black); */
   color: white;
   border-top: 2px solid #bf7474;
   background-color: #bf7474;
@@ -959,4 +914,46 @@ textarea[id=message] {
   width: 500px;
   height: 800px;
   margin-bottom: 11px;
+}
+
+/* ------------------------- Scroll Top Control ------------------------- */
+.scroll-top-btn {
+  border: unset;
+  border-radius: 25px;
+  position: fixed;
+  height: 50px;
+  bottom: 25%;
+  left: 40px;
+  background-color: #817889;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.scroll-top-btn span {
+  line-height: unset;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.scroll-top-btn:hover {
+  background-color: #236099;
+}
+
+
+/* ------------------------- Final ------------------------- */
+/* OVERFLOW MAY CAUSE AN ISSUE WITH AOS */
+main,
+body,
+section {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#root {
+  display: block;
+  width: 100%;
 }
