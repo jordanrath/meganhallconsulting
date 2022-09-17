@@ -39,6 +39,13 @@ p {
   letter-spacing: .15rem;
 }
 
+.main * textarea,
+.main * input {
+  font-weight: 100;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 25px;
+}
+
 /* ------------------------- Navbar ------------------------- */
 .nav {
   position: absolute;
@@ -183,6 +190,7 @@ p {
   color: #262626;
   background-color: #e6e5e1;
   background-color: #f3e9d8;
+  background-color: #eae3ea;
 }
 
 /* //#788089 */
@@ -267,39 +275,72 @@ p {
 }
 
 /* ------------------------- Booking Section ------------------------- */
+.home {
+  margin-top: 150px;
+  width: 100%;
+ display: flex;
+ gap: 50px;
+ justify-content: center;
+ flex-direction: column; 
+}
+
+.home-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-underline {
+  padding-top: 20px;
+  width: 40%;
+  border-bottom: 2px solid #bf7474;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 80;
+}
+
+.home h1 {
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  font-size: 55px;
+}
+
 .home-booking-container {
-  margin-top: 200px;
-  margin-bottom: 200px;
+  margin-bottom: 150px;
   width: 100%;
   padding: 0px 25% 0px 25%;
   display: flex;
   flex-grow: 1;
-  background-color: whitesmoke;
   color: #262626;
   z-index: 1;
 }
 
-/* .home-booking-container::before {
+.home::before {
   content: '';
   position: absolute;
-  width: 68%;
-  min-height: 25%;
+  width: 50%;
+  min-height: 18%;
   margin: auto;
   z-index: -1;
-  right: 15%;
-  top: 15%;
-  border-radius: 8px;
+  right: 29%;
+  top: 16%;
+  border-radius: 15px;
   background-color: #e6e5e1;
-} */
+}
 
 .home-booking {
+  width: 100%;
+  padding-right: 70px;
   display: inherit;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   flex-grow: 1;
-  row-gap: 5rem;
-  padding-right: 40px;
+  row-gap: 2rem;
   z-index: 1;
 }
 
@@ -309,7 +350,7 @@ p {
   text-align: start;
   padding-right: 0;
   padding-bottom: 10px;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .home-booking h2 {
@@ -318,15 +359,23 @@ p {
   text-transform: uppercase;
 }
 
+.home-booking h3 {
+  width: 500px;
+}
+
 .home-booking ul {
+  width: 100%;
+  row-gap: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left;
   list-style-type: none;
 }
 
 .home-booking li {
+  width: 400px;
   display: flex;
   align-items: center;
   font-size: 22px;
@@ -350,10 +399,10 @@ p {
   margin-right: 5px;
   flex-grow: 1;
   flex-shrink: 1;
-  width: 300px;
-  height: 450px;
+  width: 250px;
+  height: 400px;
   box-shadow: inset 0 0 0 1px rgb(255 255 255 / 20%), 0 4px 8px rgb(17 20 24 / 40%), 0 9px 23px 3px rgb(17 20 24 / 40%);
-  border-radius: 6px;
+  border-radius: 15px;
   z-index: 1;
 }
 
@@ -363,10 +412,10 @@ p {
   margin-left: 5px;
   flex-grow: 1;
   flex-shrink: 1;
-  width: 300px;
-  height: 450px;
+  width: 250px;
+  height: 400px;
   box-shadow: inset 0 0 0 1px rgb(255 255 255 / 20%), 0 4px 8px rgb(17 20 24 / 40%), 0 9px 23px 3px rgb(17 20 24 / 40%);
-  border-radius: 6px;
+  border-radius: 15px;
   z-index: 1;
 }
 
@@ -375,9 +424,9 @@ p {
   display: flex;
   flex-grow: 1;
   flex-shrink: 1;
-  width: 610px;
+  width: 550px;
   box-shadow: inset 0 0 0 1px rgb(255 255 255 / 20%), 0 4px 8px rgb(17 20 24 / 40%), 0 9px 23px 3px rgb(17 20 24 / 40%);
-  border-radius: 6px;
+  border-radius: 15px;
   z-index: 1;
 }
 
@@ -409,7 +458,8 @@ p {
 } */
 
 .btn-cont {
-  width: 400px;
+  padding-top: 10px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -425,23 +475,27 @@ p {
   color: #262626;
   border: none;
   padding: 15px;
-  background-color: #bf7474;
-  border-top: 4px solid #74BFBF;
+  background-color: #A7B3A5;
+  border-top: 4px solid #B4DBC0;
   cursor: pointer;
   border-radius: 4px;
+  transition: all 0.5s;
 }
 
 .btn:hover {
-  border-top: 4px solid #74BFBF;
-  background-color: #74BFBF;
-  color: white;
+  border-top: 4px solid #B4DBC0;
+  background-color: #B4DBC0;
+  color: black;
+  transition: 0.5s;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 /* ------------------------- Coaching Information Section ------------------------- */
 .coaching-info-container {
   width: 100%;
   padding: 100px 15% 100px 15%;
-  background-color: #bf7474;
+  background-color: #817889;
+  background-color: #b56357;
   text-align: left;
   display: flex;
   gap: 50px;
@@ -551,6 +605,7 @@ p {
 .introduction-container:before {
   content: '';
   position: absolute;
+  border-radius: 15px;
   width: 48%;
   min-height: 65%;
   margin: auto;
@@ -559,6 +614,7 @@ p {
   bottom: 23%;
   background-color: #f7ddbb;
   background-color: #f3e9d8;
+  background-color: #b4DBc0;
 }
 
 .intro-text {
@@ -578,6 +634,7 @@ p {
 .intro-img {
   width: 400px;
   max-height: 585px;
+  border-radius: 15px;
   box-shadow: inset 0 0 0 1px rgb(255 255 255 / 20%), 0 4px 8px rgb(17 20 24 / 40%), 0 18px 46px 6px rgb(17 20 24 / 40%);
 }
 
@@ -680,12 +737,12 @@ p {
 
 .footer-container {
   width: 100%;
-  height: fit-content;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 70px 0 50px 0;
   background-color: #817889;
+  background-color: #A7B3A5;
 }
 
 .footer-container p {
@@ -733,12 +790,20 @@ p {
 }
 
 /* ------------------------- About Page ------------------------- */
+.about-page {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 150px 15% 100px 15%;
+}
+
 .about-container {
   margin-top: 150px;
   margin-bottom: 150px;
   position: relative;
   width: 100%;
-  padding: 150px 15% 131px 15%;
   background-color: whitesmoke;
   text-align: start;
   display: flex;
@@ -750,18 +815,20 @@ p {
 .about-container:before {
   content: '';
   position: absolute;
-  width: 110%;
-  min-height: 75%;
+  width: 95%;
+  min-height: 100%;
   margin: auto;
   z-index: -1;
-  right: 0;
-  bottom: 13%;
-  background-color: #808978;
+  right: -20px;
+  bottom: 5%;
+  background-color: #b56357;
+  border-radius: 15px;
 }
 
 .about-img {
   height: 600px;
   box-shadow: inset 0 0 0 1px rgb(255 255 255 / 20%), 0 4px 8px rgb(17 20 24 / 40%), 0 18px 46px 6px rgb(17 20 24 / 40%);
+  border-radius: 15px;
 }
 
 .about-text {
@@ -793,22 +860,64 @@ p {
 }
 
 /* ------------------------- Contact Page ------------------------- */
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+}
+
 .contact-section {
-  margin-top: 150px;
-  margin-bottom: 379px;
-  padding: 150px 0 70px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  z-index: 51;
 }
 
 .contact-section:before {
   content: '';
   position: absolute;
-  width: 110%;
-  min-height: 45%;
+  width: 50%;
+  min-height: 55%;
   margin: auto;
   z-index: -1;
-  right: 0;
-  bottom: 40%;
+  right: 25%;
+  bottom: 25%;
   background-color: #788089;
+  background-color: #d63f3f;
+  /* background-color: rgb(236, 117, 5); */
+  background-color: #262626;
+  opacity: .7;
+  z-index: 2;
+}
+
+.contact-banner {
+  position: fixed;
+  height: calc(100vh - 100px);
+  width: 100%;
+}
+
+.contact-banner .svg-image-container img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  max-width: 100%;
+  z-index: -1;
+}
+
+.contact-banner .svg-banner-content-container h1 {
+  border-top: unset;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 50;
 }
 
 .contact-section h1 {
@@ -830,28 +939,57 @@ p {
 .form-container {
   display: flex;
   flex-direction: column;
+  flex: 1;
   justify-content: space-around;
   margin: 0 auto;
   width: 50%;
-  max-width: 500px;
+  max-width: 750px;
   min-width: 100px;
   color: white;
+  z-index: 52;
 }
 
-input[type=text],
-input[type=email] {
+input[type=text] {
+  width: 50%;
   background-color: white;
   color: #262626;
-  margin: 0 0 3px;
+  margin: 0 2px 3px;
   padding: 10px 10px;
   border: 0;
   border-radius: 2px;
 }
 
+.form-name-container {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+input[type=email],
+input[type=phone] {
+  width: 50%;
+  background-color: white;
+  color: #262626;
+  margin: 0 2px 3px;
+  padding: 10px 10px;
+  border: 0;
+  border-radius: 2px;
+}
+
+::placeholder {
+  color: #315e0b;
+  font-weight: 500;
+}
+
+.form-email-phone-container {
+  display: flex;
+  flex-direction: row;
+}
+
 textarea[id=message] {
   background-color: white;
   color: #262626;
-  margin: 0 0 5px;
+  margin: 0 2px 3px;
   padding: 10px 10px;
   min-height: 150px;
   border: 0;
@@ -870,24 +1008,30 @@ textarea[id=message] {
 
 .btn-contact {
   background-color: white;
-  color: #262626;
+  font-size: 25px;
+  color: #315e0b;
   border: none;
   border-top: 4px solid #bf7474;
   border-radius: 2px;
-  margin: 5px 0 30px 0;
+  /* margin: 5px 0 30px 0; */
   width: 100%;
-  max-width: 175px;
+  max-width: 255px;
   min-width: 100px;
   padding: 10px 15px;
   float: right;
   cursor: pointer;
+  transition: all 0.5s;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
 }
 
 .btn-contact:hover {
+  transition: 0.5s;
   color: white;
-  border-top: 2px solid #bf7474;
+  border-top: 4px solid #bf7474;
   background-color: #bf7474;
   color: var(--black);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 /* ------------------------- Products Page ------------------------- */
@@ -903,17 +1047,104 @@ textarea[id=message] {
   margin-bottom: 11px;
 }
 
-/* ------------------------- Blog & Podcast Page ------------------------- */
-.blog-and-podcast-container {
-  margin-top: 250px;
-  height: 100%;
+/* ------------------------- Blog Page ------------------------- */
+.blog-page {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 250px 15% 100px 15%;
 }
 
-.blog-and-podcast-img {
+.blog-page h2 {
+  font-size: 55px;
+}
+
+.blog-container {
   margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.blog-content {
   width: 500px;
-  height: 800px;
-  margin-bottom: 11px;
+  height: 300px;
+ display: flex;
+ justify-content: center;
+ border: 1px solid #262626;
+ border-radius: 15px;
+}
+
+/* ------------------------- Podcast Page ------------------------- */
+.podcast-page {
+  min-height: calc(100vh - 100px);
+  /* display: flex;
+  flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  padding: 250px 25% 100px 25%;
+}
+
+.podcast-page h2 {
+  font-size: 55px;
+}
+
+.podcast-container {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.podcast-container h2 {
+  font-size: 45px;
+}
+
+.podcast-content {
+  width: 400px;
+  max-height: 500px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ border: 1px solid #262626;
+ border-radius: 15px;
+ gap: 15px;
+}
+
+.podcast-content img {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  z-index: -1;
+}
+
+.podcast-content-text {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 0 20px;
+  height: 50%;
+  gap: 15px;
+  text-align: left;
+}
+
+.podcast-content-text h4 {
+  font-size: 12px;
+}
+
+.podcast-content-text p {
+  font-size: 15px;
 }
 
 /* ------------------------- Scroll Top Control ------------------------- */
@@ -924,7 +1155,7 @@ textarea[id=message] {
   height: 50px;
   bottom: 25%;
   left: 40px;
-  background-color: #817889;
+  background-color: #B1A5B3;
   color: #fff;
   text-align: center;
   cursor: pointer;
@@ -938,9 +1169,8 @@ textarea[id=message] {
 }
 
 .scroll-top-btn:hover {
-  background-color: #236099;
+  background-color: #7095D3;
 }
-
 
 /* ------------------------- Final ------------------------- */
 /* OVERFLOW MAY CAUSE AN ISSUE WITH AOS */
@@ -950,6 +1180,7 @@ section {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
+  
   width: 100%;
 }
 

@@ -5,7 +5,7 @@ const MetabolicHealth = () => {
     <div className='home-top-container'>
       <div className='home-top-text-container' data-aos="zoom-in-up">
         <h1>Metabolic Health</h1>
-        <h5>THE COMMON THREAD BETWEEN</h5>
+        <h5>THE FOUNDATION OF</h5>
         <div className='home-list'>
           <ul>
             <li>

@@ -1,23 +1,7 @@
 import { React, useEffect } from 'react'
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = () => {
-
-  // const resetScrollOnClick = useCallback((event) => {
-  //   event.preventDefault()
-  //   const target = event.target.getAttribute('href')
-  //   const location = document.querySelector(target).offsetTop
-
-  //   window.scrollTo({
-  //     left: 0,
-  //     top: location - 64
-  //   })
-  // }, [])
-
-  // const onClick = useCallback((event) => {
-  //   event.preventDefault();
-  //   resetScrollOnClick(event)
-  // }, [resetScrollOnClick]);
 
   useEffect(() => {
   //when user scrolls, execute stickyNav
@@ -55,13 +39,16 @@ const Navbar = () => {
                 <NavLink to='/schedule'>WORK WITH ME</NavLink>
               </li>
               <li>
-                <NavLink to='/contact'>CONTACT</NavLink>
+                <NavLink to='/podcast'>PODCAST</NavLink>
+              </li>
+              <li>
+                <NavLink to='/blog'>BLOG</NavLink>
               </li>
               <li>
                 <NavLink to='/products'>PRODUCTS</NavLink>
               </li>
               <li>
-                <NavLink to='/blog&amp;podcast'>BLOG &amp; PODCAST</NavLink>
+                <NavLink to='/contact'>CONTACT</NavLink>
               </li>
             </ul>
       </nav>

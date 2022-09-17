@@ -3,9 +3,13 @@ import { NavLink } from 'react-router-dom'
 
 export const Booking = () => {
   return (
-    <div className='home-booking-container'>
-        <div className='home-booking' data-aos="zoom-in-right" data-aos-offset="150">
-          <h1>The applied science of healthy living</h1>
+    <div className='home'>
+      <div className='home-header' data-aos="zoom-in-right" data-aos-offset="150">
+        <h1>The applied science of healthy living</h1>
+        <div className='home-underline'></div>
+      </div>
+      <div className='home-booking-container'>
+        <div className='home-booking' data-aos="zoom-in-right" data-aos-offset="150">  
           <h2>Nutrition and metabolism consultant</h2>
           <ul>
             <li><span className="material-symbols-outlined">check_circle</span>Personalized health coaching</li>
@@ -32,5 +36,6 @@ export const Booking = () => {
             </svg>
             </div> */}
       </div>
+    </div>
   )
 }

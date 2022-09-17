@@ -1,7 +1,7 @@
 import React from 'react';
 import './SvgBanner.css';
 
-const SvgBanner = ({image, color}) => {
+const SvgBanner = ({image, color, text}) => {
   return (
     <div className='svg-banner-container'>
         <div className='svg-image-container'>
@@ -13,7 +13,7 @@ const SvgBanner = ({image, color}) => {
             </svg>
         </div>
         <div className='svg-banner-content-container' data-aos="fade-left">
-            <h1>Helping you achieve limitless health</h1>
+            <h1>{text}</h1>
         </div>
     </div>
   )

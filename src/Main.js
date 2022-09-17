@@ -9,7 +9,8 @@ import About from './pages/About';
 import Schedule from './pages/Schedule';
 import Contact from './pages/Contact';
 import Products from './pages/Products';
-import BlogAndPodcast from './pages/BlogAndPodcast';
+import Podcast from './pages/Podcast';
+import Blog from './pages/Blog';
 import Testimonials from './components/section/Testimonials';
 import Footer from './components/Footer';
 import Policies from './pages/Policies';
@@ -36,7 +37,8 @@ function Main() {
           <Route path='/schedule' element={<Schedule />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/products' element={<Products />} />
-          <Route path='/blog&amp;podcast' element={<BlogAndPodcast />} />
+          <Route path='podcast' element={<Podcast />} />
+          <Route path='/blog' element={<Blog />} />
           <Route path='/testimonials' element={<Testimonials />} />
           <Route path='/policies' element={<Policies />} />
         </Routes>
