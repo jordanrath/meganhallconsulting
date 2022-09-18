@@ -1,8 +1,10 @@
 import React from 'react'
 
-const BlogContent = () => {
+const BlogContent = ({ image, info }) => {
   return (
-    <div>BlogContent</div>
+    <>
+        <img src={image} alt={info}></img>
+    </>
   )
 }
 

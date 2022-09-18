@@ -1,13 +1,40 @@
 import React from 'react'
+import ProductContent from '../ProductContent'
 
 const Products = () => {
   return (
-    <div className='products-container' data-aos='fade-out'>
-        <h2>Products</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <img src='/images/granola.jpg' alt='Granola' className='products-img'/>
-        <img src='/images/magic-mind.jpg' alt='Magic Mind' className='products-img'/>
-        <img src='/images/ancient.jpg' alt='Ancient Nutrition' className='products-img'/>
+    <div className='product-page' data-aos='fade-out'>
+      <h2>Products</h2>
+      <div className='product-container' data-aos='fade-out'>
+            <div className='product-content'>
+              <div className='product-content-text'>
+                <h4>Nutrition</h4>
+                <p>This is a short description of the collection.</p>
+              </div>
+              <ProductContent image='/images/nutrition.jpg' info='Nutrition' link='https://www.shopper.com/c/Nutrition/6BZ8'/>
+            </div>
+            <div className='product-content'>
+              <div className='product-content-text'>
+                <h4>Supplements</h4>
+                <p>This is a short description of the collection.</p>
+              </div>
+              <ProductContent image='/images/supplements.jpg' info='Supplements' link='https://www.shopper.com/c/Supplements/fLC3'/>
+            </div>
+            <div className='product-content'>
+              <div className='product-content-text'>
+                <h4>Fitness</h4>
+                <p>This is a short description of the collection.</p>
+              </div>
+              <ProductContent image='/images/fitness.jpg' info='Fitness' link='https://www.shopper.com/c/Fitness/gvC2'/>
+            </div>
+            <div className='product-content'>
+              <div className='product-content-text'>
+                <h4>Healthy Living</h4>
+                <p>This is a short description of the collection.</p>
+              </div>
+              <ProductContent image='/images/lifestyle.jpg' info='Healthy Living' link='https://www.shopper.com/c/Healthy-Living/0w7J'/>
+            </div>
+        </div>
     </div>
   )
 }

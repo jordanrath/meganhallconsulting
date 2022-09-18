@@ -10,7 +10,7 @@ import ScrollTop from '../components/controls/ScrollTop';
 const Home = () => {
   return (
     <>  
-    <SvgBanner image='/images/nav-banner2.jpg' color="#eae3ea" text='Helping you achieve limitless health'/>    
+    <SvgBanner image='/images/nav-banner2.jpg' color="#eae3ea" text='Achieve limitless health'/>    
     <div className='home-container'> 
         <MetabolicHealth />
           <div className='svg-container-bottom'>
@@ -30,5 +30,3 @@ const Home = () => {
 }
 
 export default Home
-
-// /images/mountain-banner1.jpg

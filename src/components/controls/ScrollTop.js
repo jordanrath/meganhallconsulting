@@ -15,7 +15,7 @@ const ScrollTop = () => {
     <div className='scroll-top-btn-animation'>
         <button className='scroll-top-btn' data-aos="fade" data-aos-offset="550" onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
     }}>
-    <span class="material-symbols-outlined">keyboard_double_arrow_up
+    <span className="material-symbols-outlined">keyboard_double_arrow_up
 </span>
       </button>
       </div>

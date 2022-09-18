@@ -13,7 +13,7 @@ const Contact = () => {
         <div className='contact-container' data-aos='fade-in'>
           <h1>Let's get in touch</h1>
           <div className='contact-header-bar header-bar'></div>
-            <form className='form-container'>
+            <form className='form-container' action="https://formsubmit.co/meghall@uc.davis.edu" method="POST">
               <div className='form-name-container'>
               <label htmlFor='first-name'></label>
                 <input type='text' id='first-name' placeholder='First Name*' required />
