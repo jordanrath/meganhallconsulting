@@ -3,9 +3,10 @@ import PodcastContent from '../components/PodcastContent'
 
 const Podcast = () => {
   return (
-    <div className='podcast-page'>
-        <h2 data-aos='fade-out'>Podcast Episodes</h2>
-        <div className='podcast-container' data-aos='fade-out'>
+    <div className='podcast-page' data-aos='fade-out'>
+        <h2>Podcast Episodes</h2>
+        <div className='podcast-underline'></div>
+        <div className='podcast-container'>
             <div className='podcast-content'>
               <PodcastContent image='/images/podcast.jpg' info='Podcast 1'/>
               <div className='podcast-content-text'>

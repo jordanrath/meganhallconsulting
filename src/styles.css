@@ -334,6 +334,8 @@ p {
 
 .home-booking {
   width: 100%;
+  height: 100%;
+  padding-top: 50px;
   padding-right: 70px;
   display: inherit;
   flex-direction: column;
@@ -1061,43 +1063,59 @@ textarea[id=message] {
   flex-shrink: 0;
 }
 
-.product-content {
+.product {
   width: 600px;
-  height: 300px;
+  height: 400px;
   display: flex;
   justify-content: center;
+  align-items: center;
   border: 1px solid #262626;
   border-radius: 15px;
 }
 
-.product-content img {
+.product:hover {
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 20%), 0 4px 8px rgb(17 20 24 / 40%), 0 18px 46px 6px rgb(17 20 24 / 40%);
+}
+
+.product img {
   display: flex;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius:15px;
   /* z-index: -1; */
   pointer-events: all;
   cursor: pointer;
+  opacity: .5;
 }
 
-.product-content-text {
+.product-content {
+  position: absolute;
   display: flex;
-  flex-direction: column;
-  padding: 0 20px 0 20px;
-  height: 50%;
-  width: 50%;
-  gap: 15px;
-  text-align: left;
+  justify-content: center;
+  align-items: center;
+  color: #262626;
+  text-shadow: .5px .5px white;
 }
 
-.product-content-text h4 {
-  font-size: 12px;
+.product-content a {
+  font-size: 55px;
+  color: #262626;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.product-content-text p {
+.product-content p {
   font-size: 15px;
+}
+
+.product-underline {
+  padding-top: 20px;
+  width: 40%;
+  border-bottom: 2px solid #bf7474;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 80;
 }
 
 /* ------------------------- Procucts Iframe ------------------------- */
@@ -1131,6 +1149,16 @@ textarea[id=message] {
 
 .blog-page h2 {
   font-size: 55px;
+}
+
+.blog-underline {
+  padding-top: 20px;
+  width: 40%;
+  border-bottom: 2px solid #bf7474;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 80;
 }
 
 .blog-container {
@@ -1183,8 +1211,8 @@ textarea[id=message] {
 /* ------------------------- Podcast Page ------------------------- */
 .podcast-page {
   min-height: calc(100vh - 100px);
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 250px 25% 100px 25%;
@@ -1192,6 +1220,16 @@ textarea[id=message] {
 
 .podcast-page h2 {
   font-size: 55px;
+}
+
+.podcast-underline {
+  padding-top: 20px;
+  width: 40%;
+  border-bottom: 2px solid #bf7474;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 80;
 }
 
 .podcast-container {

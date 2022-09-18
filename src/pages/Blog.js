@@ -5,6 +5,7 @@ const Blog = () => {
   return (
       <div className='blog-page' data-aos='fade-out'>
         <h2>Blog</h2>
+        <div className='blog-underline'></div>
         <div className='blog-container' data-aos='fade-out'>
             <div className='blog-content'>
               <div className='blog-content-text'>

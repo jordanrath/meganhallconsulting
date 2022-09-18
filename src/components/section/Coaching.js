@@ -37,7 +37,7 @@ const Coaching = () => {
             <span className='svg-icon-public-container'>
               <img className='svg-icon-public' src='/svg/heart-svgrepo-com.svg' alt='Heart'/>
             </span>
-            <h2>Gut and Digestive Health</h2>
+            <h2>Gut and Digestive Wellness</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
           </li>
           <li>

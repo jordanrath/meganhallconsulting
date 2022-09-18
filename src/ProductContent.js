@@ -1,13 +1,12 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 
 const ProductContent = ({ image, info, link }) => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const onClick = () => {
         window.open(link, '_blank');
         // navigate(link, {replace: true})
     }
-debugger
     return (
         <>
             <img src={image} alt={info} onClick={(e) => onClick(e)}></img>
