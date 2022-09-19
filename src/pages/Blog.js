@@ -1,10 +1,14 @@
 import React from 'react';
 import BlogContent from '../components/BlogContent';
+import SearchBar from '../components/SearchBar';
 
 const Blog = () => {
   return (
       <div className='blog-page' data-aos='fade-out'>
-        <h2>Blog</h2>
+        <div className='blog-header'>
+          <h2>Megan's Blog</h2>
+          <SearchBar id='blog-search' resultsId='blog-search-results' placeholder='Search for an article...'/>
+        </div>
         <div className='blog-underline'></div>
         <div className='blog-container' data-aos='fade-out'>
             <div className='blog-content'>

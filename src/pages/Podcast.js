@@ -1,10 +1,14 @@
 import React from 'react'
 import PodcastContent from '../components/PodcastContent'
+import SearchBar from '../components/SearchBar'
 
 const Podcast = () => {
   return (
     <div className='podcast-page' data-aos='fade-out'>
+      <div className='podcast-header'>
         <h2>Podcast Episodes</h2>
+        <SearchBar id='podcast-search' resultsId='podcast-search-results' placeholder='Search for an episode...'/>
+      </div>
         <div className='podcast-underline'></div>
         <div className='podcast-container'>
             <div className='podcast-content'>
