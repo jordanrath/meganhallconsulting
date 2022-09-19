@@ -656,13 +656,13 @@ p {
   right: 10%;
   bottom: 8%;
   background-color: rgb(36, 36, 36);
+  border-radius: 15px;
 }
 
 .testimonial-image-container {
   width: 100%;
   position: absolute;
   z-index: 10;
-  
 }
 
 .testimonial-image-container img {
@@ -1111,7 +1111,7 @@ textarea[id=message] {
 .product-underline {
   padding-top: 20px;
   width: 40%;
-  border-bottom: 2px solid #bf7474;
+  border-bottom: 2px solid #A7B3A5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1140,11 +1140,16 @@ textarea[id=message] {
 /* ------------------------- Blog Page ------------------------- */
 .blog-page {
   min-height: calc(100vh - 100px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 250px 25% 100px 25%;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .blog-page h2 {
@@ -1173,43 +1178,220 @@ textarea[id=message] {
 }
 
 .blog-content {
+  position: relative;
   width: 500px;
-  height: 300px;
- display: flex;
- justify-content: center;
- border: 1px solid #262626;
- border-radius: 15px;
+  height: 350px;
+  cursor: pointer;
+  border-radius: 16px;
+  box-shadow: 0 0 13px 0px rgba(0,0,0,.3);
+  transition: .5s;
+  overflow: hidden;
+  margin: .85rem;
 }
 
-.blog-content img {
-  display: flex;
+.blog-content:hover {
+  height: 525px;
+}
+
+.blog-content img{
+  height: 350px;
   width: 100%;
-  height: 100%;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius: 16px;
+  transition: .5s;
+}
+
+.blog-content:hover img{
+  border-radius: 16px 16px 0 0;
+}
+
+.blog-content .blog-content-text{
+  padding: 10px 15px;
+  height: 0;
+}
+
+.blog-content .blog-content-text h4{
+  margin: 10px 0;
+  font-size: 13px;
+  color: #b56357;
+  letter-spacing: 3px;
+}
+
+.blog-content .blog-content-text p{
+  text-align: justify;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.blog-content .blog-content-text div{
+  text-align: right;
+  width: 100%;
+}
+
+.blog-content .blog-content-text div button{
+  position: relative;
+  text-decoration: none;
+  border: none;
+  background-color: whitesmoke;
+  color: #b56357;
+  padding: .5rem;
+  padding: 8px;
+  text-align: center;
+  z-index: 900;
+  font-size: 14px;
+}
+
+.blog-content .blog-content-text div button::before{
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #b56357;
+  border-radius: 200px;
+  left: -13px;
+  top: 3px;
   z-index: -1;
+  transition: .3s;
 }
 
-.blog-content-text {
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px 0 20px;
-  height: 50%;
-  width: 50%;
-  gap: 15px;
-  text-align: left;
+.blog-content .blog-content-text div button:hover{
+  color: #fff;
+  cursor: pointer;
 }
 
-.blog-content-text h4 {
-  font-size: 12px;
-}
-
-.blog-content-text p {
-  font-size: 15px;
+.blog-content .blog-content-text div button:hover::before{
+  width: 100%;
+  height: 90%;
+  left: 0;
 }
 
 /* ------------------------- Podcast Page ------------------------- */
 .podcast-page {
+  min-height: calc(100vh - 100px);
+  padding: 250px 25% 100px 25%;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.podcast-page h2 {
+  font-size: 55px;
+}
+
+.podcast-underline {
+  padding-top: 20px;
+  width: 40%;
+  border-bottom: 2px solid #817889;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 80;
+}
+
+.podcast-container {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.podcast-content {
+  position: relative;
+  width: 500px;
+  height: 350px;
+  cursor: pointer;
+  border-radius: 16px;
+  box-shadow: 0 0 13px 0px rgba(0,0,0,.3);
+  transition: .5s;
+  overflow: hidden;
+  margin: .85rem;
+}
+
+.podcast-content:hover {
+  height: 500px;
+}
+
+.podcast-content img{
+  height: 350px;
+  width: 100%;
+  border-radius: 16px;
+  transition: .5s;
+}
+
+.podcast-content:hover img{
+  border-radius: 16px 16px 0 0;
+}
+
+.podcast-content .podcast-content-text{
+  padding: 10px 15px;
+  height: 0;
+}
+
+.podcast-content .podcast-content-text h4{
+  margin: 10px 0;
+  font-size: 13px;
+  color: #817889;
+  letter-spacing: 3px;
+}
+
+.podcast-content .podcast-content-text p{
+  text-align: justify;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.podcast-content .podcast-content-text div{
+  text-align: right;
+  width: 100%;
+}
+
+.podcast-content .podcast-content-text div button{
+  position: relative;
+  text-decoration: none;
+  border: none;
+  background-color: whitesmoke;
+  color: #817889;
+  padding: .5rem;
+  padding: 8px;
+  text-align: center;
+  z-index: 900;
+  font-size: 14px;
+}
+
+.podcast-content .podcast-content-text div button::before{
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #817889;
+  border-radius: 200px;
+  left: -13px;
+  top: 3px;
+  z-index: -1;
+  transition: .3s;
+}
+
+.podcast-content .podcast-content-text div button:hover{
+  color: #fff;
+  cursor: pointer;
+}
+
+.podcast-content .podcast-content-text div button:hover::before{
+  width: 100%;
+  height: 90%;
+  left: 0;
+}
+
+/* .podcast-page {
   min-height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
@@ -1258,6 +1440,11 @@ textarea[id=message] {
  gap: 15px;
 }
 
+.podcast-content:hover {
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 20%), 0 4px 8px rgb(17 20 24 / 40%), 0 18px 46px 6px rgb(17 20 24 / 40%);
+}
+
 .podcast-content img {
   display: flex;
   width: 100%;
@@ -1282,7 +1469,7 @@ textarea[id=message] {
 
 .podcast-content-text p {
   font-size: 15px;
-}
+} */
 
 /* ------------------------- Scroll Top Control ------------------------- */
 .scroll-top-btn {

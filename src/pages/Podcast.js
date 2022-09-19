@@ -12,6 +12,9 @@ const Podcast = () => {
               <div className='podcast-content-text'>
                 <h4>Episode 1 - Health</h4>
                 <p>This is a short description of the guest and episode... In this episode we talked to Megan about her website.</p>
+                <div>
+                  <button href='#' target='_blank' rel='norefferrer'>Listen</button>
+                </div>
               </div>
             </div>
             <div className='podcast-content'>
@@ -19,6 +22,9 @@ const Podcast = () => {
               <div className='podcast-content-text'>
                 <h4>Episode 2 - Nutrition</h4>
                 <p>This is a short description of the guest and episode... In this episode we talked to Megan about her website.</p>
+                <div>
+                  <button href='#' target='_blank' rel='norefferrer'>Listen</button>
+                </div>
             </div>
             </div>
             <div className='podcast-content'>
@@ -26,6 +32,9 @@ const Podcast = () => {
               <div className='podcast-content-text'>
                 <h4>Episode 3 - Nutrition</h4>
                 <p>This is a short description of the guest and episode... In this episode we talked to Megan about her website.</p>
+                <div>
+                  <button href='#' target='_blank' rel='norefferrer'>Listen</button>
+                </div>
             </div>
             </div>
             <div className='podcast-content'>
@@ -33,6 +42,9 @@ const Podcast = () => {
               <div className='podcast-content-text'>
                 <h4>Episode 4 - Supplements</h4>
                 <p>This is a short description of the guest and episode... In this episode we talked to Megan about her website.</p>
+                <div>
+                  <button href='#' target='_blank' rel='norefferrer'>Listen</button>
+                </div>
             </div>
             </div>
             <div className='podcast-content'>
@@ -40,6 +52,9 @@ const Podcast = () => {
               <div className='podcast-content-text'>
                 <h4>Episode 5 - Bloodwork</h4>
                 <p>This is a short description of the guest and episode... In this episode we talked to Megan about her website.</p>
+                <div>
+                  <button href='#' target='_blank' rel='norefferrer'>Listen</button>
+                </div>
             </div>
             </div>
             <div className='podcast-content'>
@@ -47,6 +62,9 @@ const Podcast = () => {
               <div className='podcast-content-text'>
                 <h4>Episode 6 - Health</h4>
                 <p>This is a short description of the guest and episode... In this episode we talked to Megan about her website.</p>
+                <div>
+                  <button href='#' target='_blank' rel='norefferrer'>Listen</button>
+                </div>
             </div>
             </div>
         </div>

@@ -22,19 +22,19 @@ const Products = () => {
               </div>
             </div>
             <div className='product'>
-                <ProductContent image='/images/fitness.jpg' info='Fitness' link='https://www.shopper.com/c/Fitness/gvC2'/>
-              <div className='product-content'>
-                <h4><a href='https://www.shopper.com/c/Fitness/gvC2' target='_blank' rel='noreferrer'>Fitness</a></h4>
-                {/* <p>This is a short description of the collection.</p> */}
-              </div> 
-            </div>  
-            <div className='product'>
               <ProductContent image='/images/lifestyle.jpg' info='Healthy Living' link='https://www.shopper.com/c/Healthy-Living/0w7J'/>
               <div className='product-content'>
                 <h4><a href='https://www.shopper.com/c/Healthy-Living/0w7J' target='_blank' rel='noreferrer'>Healthy Living</a></h4>
                 {/* <p>This is a short description of the collection.</p> */}
               </div>
             </div>
+            <div className='product'>
+                <ProductContent image='/images/fitness.jpg' info='Fitness' link='https://www.shopper.com/c/Fitness/gvC2'/>
+              <div className='product-content'>
+                <h4><a href='https://www.shopper.com/c/Fitness/gvC2' target='_blank' rel='noreferrer'>Fitness</a></h4>
+                {/* <p>This is a short description of the collection.</p> */}
+              </div> 
+            </div>  
         </div>
     </div>
   )
