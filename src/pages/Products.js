@@ -4,7 +4,7 @@ import ProductContent from '../ProductContent'
 const Products = () => {
   return (
     <div className='product-page' data-aos='fade-out'>
-      <h2>Products</h2>
+      <h2>Recommended Products</h2>
       <div className='product-underline'></div>
       <div className='product-container' data-aos='fade-out'>
             <div className='product'>

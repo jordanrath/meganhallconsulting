@@ -279,7 +279,7 @@ p {
 
 /* ------------------------- Booking Section ------------------------- */
 .home {
-  margin-top: 150px;
+  margin-top: 250px;
   width: 100%;
  display: flex;
  gap: 50px;
@@ -498,7 +498,7 @@ p {
 /* ------------------------- Coaching Information Section ------------------------- */
 .coaching-info-container {
   width: 100%;
-  padding: 25px 15% 25px 15%;
+  padding: 25px 15% 50px 15%;
   background-color: #817889;
   background-color: #b56357;
   text-align: left;
@@ -1161,7 +1161,7 @@ textarea[id=message] {
 }
 
 .blog-header {
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1192,7 +1192,7 @@ input[type=search]::placeholder {
 
 .blog-underline {
   padding-top: 20px;
-  width: 40%;
+  width: 70%;
   border-bottom: 2px solid #bf7474;
   display: flex;
   justify-content: center;
@@ -1318,7 +1318,7 @@ input[type=search]::placeholder {
 }
 
 .podcast-header {
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1349,7 +1349,7 @@ input[type=search]::placeholder {
 
 .podcast-underline {
   padding-top: 20px;
-  width: 40%;
+  width: 70%;
   border-bottom: 2px solid #817889;
   display: flex;
   justify-content: center;
