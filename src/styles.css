@@ -183,10 +183,13 @@ p {
 
 .home-top-container {
   width: 100%;
+  /* margin-top: 100px; */
+  /* margin-bottom: 100px; */
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
+  padding-bottom: 50px;
   color: #262626;
   background-color: #e6e5e1;
   background-color: #f3e9d8;
