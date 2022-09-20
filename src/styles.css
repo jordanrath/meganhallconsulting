@@ -498,12 +498,13 @@ p {
 /* ------------------------- Coaching Information Section ------------------------- */
 .coaching-info-container {
   width: 100%;
-  padding: 100px 15% 100px 15%;
+  padding: 25px 15% 25px 15%;
   background-color: #817889;
   background-color: #b56357;
   text-align: left;
   display: flex;
   gap: 50px;
+  /* margin: 100px 0 100px 0; */
 }
 
 .svg-coaching-info-container {
