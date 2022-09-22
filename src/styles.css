@@ -59,17 +59,6 @@ p {
   z-index: 100;
 }
 
-/* .nav.sticky {
-  position: sticky;
-  overflow: hidden;
-  color: #262626;
-  display: flex;
-  height: 100px;
-  font-family: 'Noto Sans JP', sans-serif;
-  text-shadow: 1px 1px black;
-  z-index: 100;
-} */
-
 .sticky {
   position: fixed;
   top: 0;
@@ -145,7 +134,6 @@ p {
   height: 100%;
   display: flex;
   align-items: center;
-  /* padding: .25rem; */
 }
 
 .nav li:hover,
@@ -183,20 +171,14 @@ p {
 
 .home-top-container {
   width: 100%;
-  /* margin-top: 100px; */
-  /* margin-bottom: 100px; */
   display: flex;
   flex-direction: column;
-  /* padding-top: 100px;
-  padding-bottom: 100px; */
   padding-bottom: 50px;
   color: #262626;
   background-color: #e6e5e1;
   background-color: #f3e9d8;
   background-color: #eae3ea;
 }
-
-/* //#788089 */
 
 .svg-container-bottom {
   z-index: 60;
@@ -504,7 +486,6 @@ p {
   text-align: left;
   display: flex;
   gap: 50px;
-  /* margin: 100px 0 100px 0; */
 }
 
 .svg-coaching-info-container {
@@ -585,7 +566,6 @@ p {
 }
 
 .svg-icon-public-container img {
-  /* color: #262626; */
   filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(257deg) brightness(110%) contrast(102%);
 }
 
@@ -612,14 +592,12 @@ p {
   content: '';
   position: absolute;
   border-radius: 15px;
-  width: 48%;
+  width: 49%;
   min-height: 65%;
   margin: auto;
   z-index: -1;
-  right: 25%;
+  right: 24%;
   bottom: 23%;
-  background-color: #f7ddbb;
-  background-color: #f3e9d8;
   background-color: #b4DBc0;
 }
 
@@ -966,8 +944,7 @@ input[type=text] {
 
 .form-name-container {
   display: flex;
-  flex-direction: row;
-  
+  flex-direction: row; 
 }
 
 input[type=email],
@@ -1122,25 +1099,6 @@ textarea[id=message] {
   z-index: 80;
 }
 
-/* ------------------------- Procucts Iframe ------------------------- */
-/* .products-container iframe {
-  display: flex;
-  width: 100%;
-}
-
-.slider-container {
-  display: flex;
-  width: 100%;
-}
-
-.embedded-title {
-  font-size: 55px;
-}
-
-.slpcomv2-embed-wrapper {
-  font-size: 55px;
-} */
-
 /* ------------------------- Blog Page ------------------------- */
 .blog-page {
   min-height: calc(100vh - 100px);
@@ -1163,7 +1121,7 @@ textarea[id=message] {
 .blog-header {
   width: 80%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 10%;
@@ -1171,18 +1129,6 @@ textarea[id=message] {
 
 .blog-header h2 {
   display: inherit;
-  /* padding-left: 20%; */
-}
-
-.search-container {
-  display: inherit;
-  justify-content: flex-start;
-  color: #262626;
-}
-
-input[type=search] {
-  /* width: 300px;
-  height: 40px; */
 }
 
 input[type=search]::placeholder {
@@ -1320,7 +1266,7 @@ input[type=search]::placeholder {
 .podcast-header {
   width: 80%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 10%;
@@ -1329,17 +1275,6 @@ input[type=search]::placeholder {
 .podcast-header h2 {
   display: inherit;
   justify-content: flex-start;
-}
-
-.search-container {
-  display: inherit;
-  justify-content: flex-start;
-  color: #262626;
-}
-
-input[type=search] {
-  /* width: 300px;
-  height: 40px; */
 }
 
 input[type=search]::placeholder {
@@ -1455,85 +1390,94 @@ input[type=search]::placeholder {
   left: 0;
 }
 
-/* .podcast-page {
-  min-height: calc(100vh - 100px);
+/* ------------------------- Searchbar ------------------------- */
+/* .search-filter-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 250px 25% 100px 25%;
-}
-
-.podcast-page h2 {
-  font-size: 55px;
-}
-
-.podcast-underline {
-  padding-top: 20px;
-  width: 40%;
-  border-bottom: 2px solid #bf7474;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 80;
-}
-
-.podcast-container {
-  margin-top: 50px;
-  width: 100%;
-  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  flex-grow: 1;
-  flex-shrink: 0;
-}
-
-.podcast-container h2 {
-  font-size: 45px;
-}
-
-.podcast-content {
-  width: 400px;
-  max-height: 500px;
- display: flex;
- flex-direction: column;
- justify-content: center;
- border: 1px solid #262626;
- border-radius: 15px;
- gap: 15px;
-}
-
-.podcast-content:hover {
-  cursor: pointer;
-  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 20%), 0 4px 8px rgb(17 20 24 / 40%), 0 18px 46px 6px rgb(17 20 24 / 40%);
-}
-
-.podcast-content img {
-  display: flex;
-  width: 100%;
-  height: 70%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  z-index: -1;
-}
-
-.podcast-content-text {
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px 0 20px;
-  height: 50%;
-  gap: 15px;
-  text-align: left;
-}
-
-.podcast-content-text h4 {
-  font-size: 12px;
-}
-
-.podcast-content-text p {
-  font-size: 15px;
 } */
+
+.search-container {
+  position: relative;
+  display: inherit;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-left: 40px;
+  min-width: 100px;
+  color: #262626;
+}
+
+.search-container ul {
+  border-left: 2px solid #262626;
+  border-right: 2px solid #262626;
+  border-bottom: 2px solid #262626;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  font-size: 35px;
+}
+
+.search-field {
+  width: 100%;
+  padding: 10px 35px 10px 15px;
+}
+
+
+.search-field::-webkit-search-cancel-button{
+  position: relative;
+  right: 0px;
+  cursor: pointer;
+
+  -webkit-appearance: caps-lock-indicator; 
+}
+
+.search-container form {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-container input {
+  border-radius: 15px;
+  padding-left: 50px;
+}
+
+/* ------------------------- Filter Button ------------------------- */
+.collapsible-btn {
+  background-color: #eee;
+  cursor: pointer;
+  padding: 15px;
+  width: 100px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+/* .active, .collapsible-btn:hover {
+  background-color: red;
+} */
+
+.filter-content {
+  padding: 0 15px;
+  /* display: none;
+  overflow: hidden; */
+  background-color: #f1f1f1;
+}
+
+.podcast-filtered-items {
+  margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
 
 /* ------------------------- Scroll Top Control ------------------------- */
 .scroll-top-btn {
@@ -1568,7 +1512,6 @@ section {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  
   width: 100%;
 }
 
