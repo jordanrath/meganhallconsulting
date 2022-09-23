@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import PodcastContent from './PodcastContent';
 
 const FilterItems = ({ data = {}, description = '', header = '' }) => {
@@ -8,7 +8,6 @@ const FilterItems = ({ data = {}, description = '', header = '' }) => {
 
     useEffect(() => {
         setDisplayed(data);
-        console.log(data)
     }, [data]);
 
     useEffect(() => {
@@ -23,27 +22,10 @@ const FilterItems = ({ data = {}, description = '', header = '' }) => {
         setDisplayed(filtered);
 
         }, [filter, data]);
-        
-    const handleFilterClick = () => {
-        setFilterActive(current => !current);
-    };
 
-  return (
-    // <div className='filter-items-container'>
-    <>
-    <button type='button' className={filterActive ? 'collapsible-btn' : ''}>Filter</button>
-        <div className='filter-content'>
-            <button onClick={() => setFilter('all')}>Show All</button>
-            <button onClick={() => setFilter('Wellness')}>Wellness</button>
-            <button onClick={() => setFilter('Nutrition')}>Nutrition</button>
-            <button onClick={() => setFilter('Fitness')}>Fitness</button>
-            <button onClick={() => setFilter('Supplementation')}>Supplementation</button>
-            <button onClick={() => setFilter('Testing')}>Testing</button>
-            <button onClick={() => setFilter('Other')}>Other</button>
-        </div>
-        <div className='podcast-filtered-items'>
-            <div className='podcast-container'> 
-            {displayed.map(item =>
+        //useMemo hook to optimize the map function for filtered items
+        const filteredItems = useMemo(() => {
+            return displayed.map(item =>
                 item.filtered === true ?
                     <div className='podcast-content'>
                         <span key={item.title}>
@@ -58,9 +40,53 @@ const FilterItems = ({ data = {}, description = '', header = '' }) => {
                         </span>
                     </div> 
                     : ''
-                )}
-                    
+                )
+            }, [displayed]);   
+        
+    const HandleFilterClick = () => {
+        setFilterActive(current => !current);
+
+        return (
+            <div>
+                <button type='button' className={filterActive ? 'collapsible-btn filter-active' : 'collapsible-btn'} onClick={HandleFilterClick}>Filter</button>
+                <div className='filter-content'>
+                    { filterActive ? <DisplayBtns /> : null}
                 </div>
+            </div>
+        )
+
+        // handleSetFilter();
+    };
+
+    const DisplayBtns = () => (
+            <div id='filter-buttons' className={filter === '' ? 'filter-content' : 'filter-buttons-active'}>
+                <button onClick={() => setFilter('all')} className={filter === 'all' ? 'filter-button-active' : ''}>Show All</button>
+                <button onClick={() => setFilter('Wellness')} className={filter === 'Wellness' ? 'filter-button-active' : ''}>Wellness</button>
+                <button onClick={() => setFilter('Nutrition')} className={filter === 'Nutrition' ? 'filter-button-active' : ''}>Nutrition</button>
+                <button onClick={() => setFilter('Fitness')} className={filter === 'Fitness' ? 'filter-button-active' : ''}>Fitness</button>
+                <button onClick={() => setFilter('Supplementation')} className={filter === 'Supplementation' ? 'filter-button-active' : ''}>Supplementation</button>
+                <button onClick={() => setFilter('Testing')} className={filter === 'Testing' ? 'filter-button-active' : ''}>Testing</button>
+                <button onClick={() => setFilter('Other')} className={filter === 'Other' ? 'filter-button-active' : ''}>Other</button>
+            </div>
+    )
+
+    const handleSetFilter = () => {
+        return displayed.map(item => 
+            item.filtered === true ?
+            setFilter(item.category)
+            : setFilter('')
+        )
+    };
+
+  return (
+    // <div className='filter-items-container'>
+    //{filterActive ? 'collapsible-btn' : ''}
+    <>
+        <HandleFilterClick />
+        <div className='podcast-filtered-items'>
+            <div className='podcast-container'> 
+                {filteredItems}        
+            </div>
         </div>
     </>
     // </div>
