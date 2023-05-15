@@ -30,7 +30,7 @@ const Navbar = () => {
             <ul>
               <li className='site-title-container'>
                 <Link to='/' className='site-title'>Apeiron Health</Link>
-                <Link to='/' className='site-title-quote'>The applied science of healthy living</Link>
+                <Link to='/' className='site-title-quote'>The applied science limitless health and performance</Link>
               </li>
               <li>
                 <NavLink to='/about'>ABOUT</NavLink>

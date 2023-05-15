@@ -19,7 +19,7 @@ export const Booking = () => {
           <div className='btn-cont'>
             <h3>The journey to your best life begins now</h3>
             <NavLink to='schedule'>
-              <button className='btn' type='button'>SCHEDULE A FREE CONSULTATION</button>
+              <button className='btn' type='button'>GET STARTED!</button>
             </NavLink>
           </div>
         </div>

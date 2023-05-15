@@ -15,14 +15,16 @@ const SearchBar = ({ id, placeholder, resultsId, data = {}, searchFunc = emptyAr
   
   return (
     <div className='search-container'>
-        <form>
-            <span className="material-symbols-outlined search-icon">
-                  search
-            </span>
+        <div className='search-bar'>
             <input value={searchText} onChange={(e) => {
               setSearchText(e.currentTarget.value)
-              }} type='search' id={id} className='search-field' placeholder={placeholder} />             
-        </form>
+              }} type='text' id={id} className='search__input' placeholder={placeholder} />             
+          <button className='search__submit'>
+            <span className="material-symbols-outlined search-icon">
+              search
+            </span>
+          </button>
+        </div>
         <ul id={resultsId}>
           {itemsJSX}
         </ul>
@@ -31,3 +33,21 @@ const SearchBar = ({ id, placeholder, resultsId, data = {}, searchFunc = emptyAr
 }
 
 export default SearchBar
+
+
+// return (
+//   <div className='search-container'>
+//       <form>
+//           <span className="material-symbols-outlined search-icon">
+//                 search
+//           </span>
+//           <input value={searchText} onChange={(e) => {
+//             setSearchText(e.currentTarget.value)
+//             }} type='search' id={id} className='search-field' placeholder={placeholder} />             
+//       </form>
+//       <ul id={resultsId}>
+//         {itemsJSX}
+//       </ul>
+//   </div>
+// )
+// }

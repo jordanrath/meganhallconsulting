@@ -40,9 +40,9 @@ const Podcast = () => {
         <div className='podcast-header'>
           <h2>Podcast Episodes</h2>
           <div className='podcast-underline'></div>
-          <div className='search-filter-container'>
+          {/* <div className='search-filter-container'> */}
             <SearchBar searchFunc={podcastSearch} renderFunc={podcastRenderer} data={podcasts} id='podcast-search' resultsId='podcast-search-results' placeholder='Search for an episode...'/>
-          </div>
+          {/* </div> */}
         </div>
         <FilterItems data={podcasts} header={header} desription={description} />
       </div>

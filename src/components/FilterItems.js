@@ -45,12 +45,19 @@ const FilterItems = ({ data = {}, description = '', header = '' }) => {
         
     const HandleFilterClick = () => {
         setFilterActive(current => !current);
-
+//{filterActive ? 'collapsible-btn filter-active' : 'collapsible-btn'}
         return (
-            <div>
-                <button type='button' className={filterActive ? 'collapsible-btn filter-active' : 'collapsible-btn'} onClick={HandleFilterClick}>Filter</button>
-                <div className='filter-content'>
-                    { filterActive ? <DisplayBtns /> : null}
+            <div className='filter-container'>
+                <div className='filter-button-content'>
+                    <div className='filter-content'>
+                        <DisplayBtns />
+                        {/* { filterActive ? <DisplayBtns /> : null} */}
+                    </div>
+                    <button type='button' className='collapsible-btn filter-active' onClick={HandleFilterClick}>
+                        <span className="material-symbols-outlined">
+                            filter_alt
+                        </span>
+                    </button>
                 </div>
             </div>
         )
