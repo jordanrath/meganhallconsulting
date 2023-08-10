@@ -15,7 +15,7 @@ const Navbar = () => {
 
   //add the sticky class to the nav element when a scroll position is reached
   const stickyNav = () => {
-    if (window.pageYOffset >= sticky) {
+    if (window.scrollY > sticky) {
       navbar.classList.add('sticky')
     } else {
       navbar.classList.remove('sticky')
@@ -30,7 +30,7 @@ const Navbar = () => {
             <ul>
               <li className='site-title-container'>
                 <Link to='/' className='site-title'>Apeiron Health</Link>
-                <Link to='/' className='site-title-quote'>The applied science limitless health and performance</Link>
+                <Link to='/' className='site-title-quote'>The applied science of limitless health and performance</Link>
               </li>
               <li>
                 <NavLink to='/about'>ABOUT</NavLink>

@@ -8,7 +8,7 @@ export const Booking = () => {
         <h1>The applied science of healthy living</h1>
         <div className='home-underline'></div>
       </div>
-      <div className='home-booking-container'>
+      <div className='home-booking-container container'>
         <div className='home-booking' data-aos="zoom-in-right" data-aos-offset="150">  
           <h2>Nutrition and metabolism consultant</h2>
           <ul>
@@ -19,7 +19,7 @@ export const Booking = () => {
           <div className='btn-cont'>
             <h3>The journey to your best life begins now</h3>
             <NavLink to='schedule'>
-              <button className='btn' type='button'>GET STARTED!</button>
+              <button className='btn' type='button'>Get Started!</button>
             </NavLink>
           </div>
         </div>

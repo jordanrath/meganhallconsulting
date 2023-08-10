@@ -10,14 +10,14 @@ import ScrollTop from '../components/controls/ScrollTop';
 const Home = () => {
   return (
     <>  
-    <SvgBanner image='/images/nav-banner2.jpg' color="#eae3ea" text='Achieve limitless health'/>    
+    <SvgBanner />    
     <div className='home-container'> 
         <MetabolicHealth />
-          <div className='svg-container-bottom'>
+          {/* <div className='svg-container-bottom'>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 305" preserveAspectRatio='none'>
               <path fill="#eae3ea" fillOpacity="1" d="M 0 0 L 120 37.3 C 240 75 480 149 720 192 C 954 225 1195 229 1289 226 L 1441 209 L 1440 0 L 1320 0 C 1200 0 960 0 720 0 C 480 0 240 0 120 0 L 0 0 Z"></path>
             </svg>
-          </div>
+          </div> */}
         <Booking />
         <Coaching />
         <Introduction />
@@ -29,4 +29,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;

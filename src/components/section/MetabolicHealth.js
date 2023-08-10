@@ -3,11 +3,11 @@ import React from 'react'
 const MetabolicHealth = () => {
   return (
     <div className='home-top-container'>
-      <div className='home-top-text-container' data-aos="zoom-in-up">
+      <div className='home-top-text-container container' data-aos="zoom-in-up">
         <h1>Feel and perform better today… and for the rest of your life.</h1>
-        <h5>IT ALL STARTS WITH</h5>
+        {/* <h5>IT ALL STARTS WITH</h5>
         <h2>Metabolic Health</h2>
-        <h5>THE FOUNDATION OF</h5>
+        <h5>THE FOUNDATION OF</h5> */}
         <div className='home-list'>
           <ul>
             <li>
