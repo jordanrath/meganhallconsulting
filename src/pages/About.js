@@ -2,7 +2,7 @@ import React from 'react';
 
 const about = () => {
   return (
-    <div className='about-page'>
+    <div className='about-page container'>
       <div className='about-container'>
       <img src='/images/about-page-image.jpg' data-aos='slide-right' alt='Megan and Cooper' className='about-img'/>
           <div className='about-text' data-aos='slide-left'>
