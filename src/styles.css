@@ -707,6 +707,7 @@ p {
 .home-container {
   margin: auto;
   position: relative;
+  top: 0;
   width: 100%;
   max-width: 100%;
   display: flex;
@@ -2918,6 +2919,10 @@ li {
 
   .container {
     width: 390px;
+  }
+
+  .home-container {
+    top: 0;
   }
 
   .home-top-container {
