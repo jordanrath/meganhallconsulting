@@ -1350,26 +1350,27 @@ color: var(--neutral-lm);
 .about-page {
   min-height: calc(100vh - 100px);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 150px 15% 100px 15%;
+  margin-top: 50px;
+  margin-bottom: 150px;
 }
 
 .about-container {
-  margin-top: 150px;
-  margin-bottom: 150px;
   position: relative;
   width: 100%;
   background-color: var(--background-lm);
   text-align: start;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 50px;
   z-index: 1;
   color: var(--on-secondary);
 }
 
-.about-container:before {
+/* .about-container:before {
   content: '';
   position: absolute;
   width: 95%;
@@ -1380,11 +1381,14 @@ color: var(--neutral-lm);
   bottom: 5%;
   background-color: var(--secondary-lm);
   border-radius: 15px;
-}
+} */
 
 .about-img {
-  height: 600px;
-  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 20%), 0 4px 8px rgb(17 20 24 / 40%), 0 18px 46px 6px rgb(17 20 24 / 40%);
+  width: 70%;
+  box-shadow: 
+    inset 0 0 0 1px rgb(255 255 255 / 20%), 
+    0 4px 8px rgb(17 20 24 / 40%), 
+    0 8px 36px 2px rgb(17 20 24 / 40%);
   border-radius: 30px;
 }
 
@@ -2557,7 +2561,6 @@ body.dark-mode {
 .dark-mode .contact__form-title [type=email],
 .dark-mode .contact__form-title textarea[id=message] {
   border-bottom: 2px solid var(--tertiary-variant-dm);
-  min-width: unset;
 }
 
 .contact__form-title input[type=text]:focus-visible,
@@ -2686,18 +2689,32 @@ li {
 }
 
 @media only screen and (max-width: 1500px) {
-.nav ul {
-  width: 100%;
-  gap: 0 2rem;
-}
+  .nav ul {
+    width: 100%;
+    gap: 0 2rem;
+  }
 
-.nav a {
-  width: unset;
-}
+  .nav a {
+    width: unset;
+  }
 
-.podcast-page {
-  padding: 250px 10% 100px 10%;
-}
+  .podcast-page {
+    padding: 250px 10% 100px 10%;
+  }
+
+  .swiper-container .swiper-3d {
+    width: 500px;
+  }
+
+  .swiper-button-prev {
+    top: 350px !important;
+    color: var(--primary-variant-lm) !important;
+  }
+
+  .swiper-button-next {
+    top: 350px !important;
+    color: var(--primary-variant-lm) !important;
+  }
 }
 
 @media only screen and (max-width: 1150px) {
@@ -2773,7 +2790,6 @@ li {
     bottom: 5%;
     z-index: 10000;
   }
-
 }
 
 @media only screen and (max-width: 1024px) {
@@ -2897,7 +2913,97 @@ li {
 }
 
 @media only screen and (max-width: 601px) {
+  .swiper-container .swiper-3d {
+    width: 300px;
+    height: 350px;
+  }
 
+  .swiper-container {
+    margin-bottom: 200px;
+  }
+  
+  .swiper {
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+  .swiper-button-prev {
+    top: 350px !important;
+    color: var(--primary-variant-lm) !important;
+  }
+
+  .swiper-button-next {
+    top: 350px !important;
+    color: var(--primary-variant-lm) !important;
+  }
+
+  .swiper-pagination {
+    top: 450px !important;
+  }
+
+  .footer-section {
+    height: 150px;
+  }
+
+  .footer-container {
+    height: 150px;
+    flex-direction: column;
+    padding: 20px 0px;
+  }
+
+  .footer-container p,
+  .disclosure {
+    width: unset;
+    margin: 0;
+  }
+
+  .scroll-top-btn {
+    display: none;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px !important;
+    height: 350px !important;
+    border-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--background-secondary-lm);
+    box-shadow:
+    0 1px 1px rgba(0,0,0,0.1), 
+    0 2px 2px rgba(0,0,0,0.1), 
+    0 4px 4px rgba(0,0,0,0.2), 
+    0 8px 8px rgba(0,0,0,0.2),
+    0 16px 16px rgba(0,0,0,0.3);
+    overflow: hidden;
+  }
+
+  .testimonial-slide {
+    padding: 0px;
+    padding-right: 10px;
+    color: var(--on-secondary);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 250px;
+    width: 300px;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 0px;
+    overflow: auto;
+  }
 }
 
 /* ------------------------- Mobile Media Queries ------------------------- */
@@ -3031,93 +3137,6 @@ li {
     width: 90%;
   }
 
-  .swiper-container {
-    margin-bottom: 200px;
-  }
-  
-  .swiper {
-    width: 300px;
-    height: 300px;
-    padding: 50px;
-  }
-  
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-  }
-
-  .swiper-button-prev {
-    top: 350px !important;
-    color: var(--primary-variant-lm) !important;
-  }
-
-  .swiper-button-next {
-    top: 350px !important;
-    color: var(--primary-variant-lm) !important;
-  }
-
-  .swiper-pagination {
-    top: 450px !important;
-  }
-
-  .footer-section {
-    height: 150px;
-  }
-
-  .footer-container {
-    height: 150px;
-    flex-direction: column;
-    padding: 20px 0px;
-  }
-
-  .footer-container p,
-  .disclosure {
-    width: unset;
-    margin: 0;
-  }
-
-  .scroll-top-btn {
-    display: none;
-  }
-
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px !important;
-    height: 350px !important;
-    border-radius: 10px;
-    border-top-right-radius: 10px;
-    background-color: var(--background-secondary-lm);
-    box-shadow:
-    0 1px 1px rgba(0,0,0,0.1), 
-    0 2px 2px rgba(0,0,0,0.1), 
-    0 4px 4px rgba(0,0,0,0.2), 
-    0 8px 8px rgba(0,0,0,0.2),
-    0 16px 16px rgba(0,0,0,0.3);
-    overflow: hidden;
-  }
-
-  .testimonial-slide {
-    padding: 0px;
-    padding-right: 10px;
-    color: var(--on-secondary);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    height: 250px;
-    width: 300px;
-    margin-top: 0px;
-    margin-left: 20px;
-    margin-right: 0px;
-    overflow: auto;
-  }
-
   .blog-page {
     padding: 100px 0px 200px 0px;
   }
@@ -3199,8 +3218,20 @@ li {
     width: 90%;
   }
 
+  .contact__form-title textarea[id=message] {
+  min-width: unset;
+}
+
   .svg-image-container {
     display: none;
+  }
+
+  .contact__btn {
+    width: 100%;
+  }
+
+  .contact-section {
+    overflow: hidden;
   }
 }
 
