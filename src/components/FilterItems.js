@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import PodcastContent from './PodcastContent';
 
-const FilterItems = ({ data = {}, description = '', header = '' }) => {
+const FilterItems = ({ data = {}, key = '', description = '', header = '' }) => {
     const [filterActive, setFilterActive] = useState(false);
     const [filter, setFilter] = useState('all');
     const [displayed, setDisplayed] = useState([]);
@@ -15,13 +15,14 @@ const FilterItems = ({ data = {}, description = '', header = '' }) => {
         setDisplayed([]);
 
         const filtered = data.map(item => ({ 
+            key: key,
             ...item, 
             filtered: item.category.includes(filter) 
         }));
     
         setDisplayed(filtered);
 
-        }, [filter, data]);
+        }, [filter, data, key]);
 
         //useMemo hook to optimize the map function for filtered items
         const filteredItems = useMemo(() => {
@@ -44,7 +45,7 @@ const FilterItems = ({ data = {}, description = '', header = '' }) => {
             }, [displayed]);   
         
     const HandleFilterClick = () => {
-        setFilterActive(current => !current);
+        // setFilterActive(current => !current);
 //{filterActive ? 'collapsible-btn filter-active' : 'collapsible-btn'}
         return (
             <div className='filter-container'>
@@ -66,24 +67,24 @@ const FilterItems = ({ data = {}, description = '', header = '' }) => {
     };
 
     const DisplayBtns = () => (
-            <div id='filter-buttons' className={filter === '' ? 'filter-content' : 'filter-buttons-active'}>
-                <button onClick={() => setFilter('all')} className={filter === 'all' ? 'filter-button-active' : ''}>Show All</button>
-                <button onClick={() => setFilter('Wellness')} className={filter === 'Wellness' ? 'filter-button-active' : ''}>Wellness</button>
-                <button onClick={() => setFilter('Nutrition')} className={filter === 'Nutrition' ? 'filter-button-active' : ''}>Nutrition</button>
-                <button onClick={() => setFilter('Fitness')} className={filter === 'Fitness' ? 'filter-button-active' : ''}>Fitness</button>
-                <button onClick={() => setFilter('Supplementation')} className={filter === 'Supplementation' ? 'filter-button-active' : ''}>Supplementation</button>
-                <button onClick={() => setFilter('Testing')} className={filter === 'Testing' ? 'filter-button-active' : ''}>Testing</button>
-                <button onClick={() => setFilter('Other')} className={filter === 'Other' ? 'filter-button-active' : ''}>Other</button>
-            </div>
+        <div id='filter-buttons' className={filter === '' ? 'filter-content' : 'filter-buttons-active'}>
+            <button onClick={() => setFilter('all')} className={filter === 'all' ? 'filter-button-active' : 'filter-btn'}>Show All</button>
+            <button onClick={() => setFilter('Wellness')} className={filter === 'Wellness' ? 'filter-button-active' : 'filter-btn'}>Wellness</button>
+            <button onClick={() => setFilter('Nutrition')} className={filter === 'Nutrition' ? 'filter-button-active' : 'filter-btn'}>Nutrition</button>
+            <button onClick={() => setFilter('Fitness')} className={filter === 'Fitness' ? 'filter-button-active' : 'filter-btn'}>Fitness</button>
+            <button onClick={() => setFilter('Supplementation')} className={filter === 'Supplementation' ? 'filter-button-active' : 'filter-btn'}>Supplementation</button>
+            <button onClick={() => setFilter('Testing')} className={filter === 'Testing' ? 'filter-button-active' : 'filter-btn'}>Testing</button>
+            <button onClick={() => setFilter('Other')} className={filter === 'Other' ? 'filter-button-active' : 'filter-btn'}>Other</button>
+        </div>
     )
 
-    const handleSetFilter = () => {
-        return displayed.map(item => 
-            item.filtered === true ?
-            setFilter(item.category)
-            : setFilter('')
-        )
-    };
+    // const handleSetFilter = () => {
+    //     return displayed.map(item => 
+    //         item.filtered === true ?
+    //         setFilter(item.category)
+    //         : setFilter('')
+    //     )
+    // };
 
   return (
     // <div className='filter-items-container'>
@@ -100,4 +101,4 @@ const FilterItems = ({ data = {}, description = '', header = '' }) => {
   )
 }
 
-export default FilterItems
+export default FilterItems;

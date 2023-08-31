@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import SvgBanner from '../components/SvgBanner';
+import { ThemeContext, themes } from '../contexts/ThemeContext';
 
 const Contact = () => {
-
     const [characters, setCharacters] = useState(0);
+    const { theme } = useContext(ThemeContext);
 
   return (
     <div className='contact-page'>
       <div className='contact-banner'>
         <div data-aos='fade-in'>
-         <SvgBanner image='/images/contact-plant.jpg' color='none' text='' />
+         {theme === themes.dark ? '' : <SvgBanner image='/images/contact-plant.jpg' color='none' text='' />}
         </div>
       </div>
       <div className='contact-section__container'>
@@ -52,7 +53,7 @@ const Contact = () => {
                   </label>
               </div>
               <div className='contact__btn-container'>
-                  <button type='submit' className='contact__btn'>Submit Message</button>
+                  <button type='submit' className='contact__btn custom-btn btn'>Submit Message</button>
               </div>    
             </form>
           </div>

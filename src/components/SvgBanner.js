@@ -2,9 +2,6 @@ import React from 'react';
 import './SvgBanner.css';
 
 const SvgBanner = ({image, color, text}) => {
-    console.log(image)
-    
-    
 
     const Banner = () => {
         return (

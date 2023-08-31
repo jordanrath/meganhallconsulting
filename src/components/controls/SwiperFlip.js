@@ -1,32 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { EffectFlip, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/effect-coverflow';
 import 'swiper/css/effect-flip';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { EffectCoverflow, EffectFlip, Pagination, Navigation } from 'swiper/modules';
-import SwiperFlip from '../controls/SwiperFlip';
-import SwiperFlow from '../controls/SwiperFlow';
 
-const Testimonials = () => {
-
-    // Turn this into useRef as well as store julieFeld in a data file.
-    const [isDesktop, setisDesktop] = useState(window.innerWidth > 1450);
-
-    const updateMediaQuery = () => {
-      setisDesktop(window.innerWidth > 1450);
-    }
-  
-    useEffect(() => {
-      window.addEventListener('resize', updateMediaQuery);
-      return () => window.removeEventListener('resize', updateMediaQuery);
-    });
-  
-
-    // {/* {({ isActive }) => (
-    //                 <div>Current slide is {isActive ? 'active' : 'not active'}</div>
-    //                 )} */}
+const SwiperFlip = () => {
 
     const julieFeld = 
         <div className='testimonial-slide'>
@@ -63,19 +43,42 @@ const Testimonials = () => {
             </div>
         </div>
 
-  return ( 
-    <> 
-        {isDesktop ? (
-            <SwiperFlow />
-        ) : ( 
-            <SwiperFlip />
-        )}
-    </> 
+  return (
+    <>
+    <div className='testimonial-section container' data-aos="zoom-in-up"> 
+        <div className='testimonial-title'>
+            <h1>Testimonials</h1>
+            <h1 className='testimonial-period'>:</h1>
+        </div>      
+        <div className='swiper-container'>
+            <Swiper
+                effect={'flip'}
+                grabCursor={true}
+                pagination={true}
+                navigation={true}
+                modules={[EffectFlip, Pagination, Navigation]}
+                className="mySwiper"
+            >
+                <SwiperSlide>
+                    {julieFeld}
+                </SwiperSlide>
+                <SwiperSlide>
+                    {julieFeld}
+                </SwiperSlide>
+                <SwiperSlide>
+                    {julieFeld}
+                </SwiperSlide>
+                <SwiperSlide>
+                    {julieFeld}
+                </SwiperSlide>
+                <SwiperSlide>
+                    {julieFeld}
+                </SwiperSlide>
+            </Swiper>
+        </div>
+    </div>
+    </>
   )
 }
 
-export default Testimonials;
-
-
-//"@testing-library/jest-dom": "^5.16.5",
-//IN package.json
+export default SwiperFlip;

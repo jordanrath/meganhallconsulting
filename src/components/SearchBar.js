@@ -32,22 +32,4 @@ const SearchBar = ({ id, placeholder, resultsId, data = {}, searchFunc = emptyAr
   )
 }
 
-export default SearchBar
-
-
-// return (
-//   <div className='search-container'>
-//       <form>
-//           <span className="material-symbols-outlined search-icon">
-//                 search
-//           </span>
-//           <input value={searchText} onChange={(e) => {
-//             setSearchText(e.currentTarget.value)
-//             }} type='search' id={id} className='search-field' placeholder={placeholder} />             
-//       </form>
-//       <ul id={resultsId}>
-//         {itemsJSX}
-//       </ul>
-//   </div>
-// )
-// }
+export default SearchBar;
