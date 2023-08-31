@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/jordanrath/meganhallconsulting.github.io.git/static/css/main.7c05d415.css",
+    "main.js": "/jordanrath/meganhallconsulting.github.io.git/static/js/main.2414c675.js",
+    "index.html": "/jordanrath/meganhallconsulting.github.io.git/index.html",
+    "main.7c05d415.css.map": "/jordanrath/meganhallconsulting.github.io.git/static/css/main.7c05d415.css.map",
+    "main.2414c675.js.map": "/jordanrath/meganhallconsulting.github.io.git/static/js/main.2414c675.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c05d415.css",
+    "static/js/main.2414c675.js"
+  ]
+}
