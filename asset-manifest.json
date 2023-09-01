@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "./meganhallconsulting/static/css/main.7c05d415.css",
-    "main.js": "./meganhallconsulting/static/js/main.5460eade.js",
-    "index.html": "./meganhallconsulting/index.html",
-    "main.7c05d415.css.map": "./meganhallconsulting/static/css/main.7c05d415.css.map",
-    "main.5460eade.js.map": "./meganhallconsulting/static/js/main.5460eade.js.map"
+    "main.css": "./static/css/main.7c05d415.css",
+    "main.js": "./static/js/main.544b8fc7.js",
+    "index.html": "./index.html",
+    "main.7c05d415.css.map": "./static/css/main.7c05d415.css.map",
+    "main.544b8fc7.js.map": "./static/js/main.544b8fc7.js.map"
   },
   "entrypoints": [
     "static/css/main.7c05d415.css",
-    "static/js/main.5460eade.js"
+    "static/js/main.544b8fc7.js"
   ]
 }
