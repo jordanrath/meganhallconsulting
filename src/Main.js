@@ -32,15 +32,15 @@ function Main() {
       <div className="main">
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/schedule' element={<Schedule />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/products' element={<Products />} />
-          <Route path='podcast' element={<Podcast />} />
-          <Route path='/blog' element={<Blog />} />
-          <Route path='/testimonials' element={<Testimonials />} />
-          <Route path='/policies' element={<Policies />} />
+          <Route path='/meganhallconsulting' element={<Home />} />
+          <Route path='/meganhallconsulting/about' element={<About />} />
+          <Route path='/meganhallconsulting/schedule' element={<Schedule />} />
+          <Route path='/meganhallconsulting/contact' element={<Contact />} />
+          <Route path='/meganhallconsulting/products' element={<Products />} />
+          <Route path='/meganhallconsulting/podcast' element={<Podcast />} />
+          <Route path='/meganhallconsulting/blog' element={<Blog />} />
+          <Route path='/meganhallconsulting/testimonials' element={<Testimonials />} />
+          <Route path='/meganhallconsulting/policies' element={<Policies />} />
         </Routes>
         <div className='footer-section'>
           <Footer />

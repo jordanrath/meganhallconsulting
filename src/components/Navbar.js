@@ -41,26 +41,26 @@ const Navbar = () => {
         <nav className='nav' id='nav' data-aos="fade-down">
           <ul>
             <li className='site-title-container'>
-              <Link to='/' className='site-title'>Megan Hall Consulting</Link>
-              <Link to='/' className='site-title-quote'>The applied science of limitless health and performance</Link>
+              <Link to='/meganhallconsulting' className='site-title'>Megan Hall Consulting</Link>
+              <Link to='/meganhallconsulting' className='site-title-quote'>The applied science of limitless health and performance</Link>
             </li>
             <li>
-              <NavLink to='/about'>ABOUT</NavLink>
+              <NavLink to='/meganhallconsulting/about'>ABOUT</NavLink>
             </li>
             <li>
-              <NavLink to='/schedule'>WORK WITH ME</NavLink>
+              <NavLink to='/meganhallconsulting/schedule'>WORK WITH ME</NavLink>
             </li>
             {/* <li>
               <NavLink to='/podcast'>PODCAST</NavLink>
             </li> */}
             <li>
-              <NavLink to='/blog'>BLOG</NavLink>
+              <NavLink to='/meganhallconsulting/blog'>BLOG</NavLink>
             </li>
             <li>
-              <NavLink to='/products'>PRODUCTS</NavLink>
+              <NavLink to='/meganhallconsulting/products'>PRODUCTS</NavLink>
             </li>
             <li>
-              <NavLink to='/contact'>CONTACT</NavLink>
+              <NavLink to='/meganhallconsulting/contact'>CONTACT</NavLink>
             </li>
             <li>
               <ThemeButton />

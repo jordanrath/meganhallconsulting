@@ -20,7 +20,7 @@ const MenuOpen = (props) => {
             <button className='menu__buttons' onClick={() => setMenuOpen(!menuOpen)}>
                 <ul >
                     <li>
-                      <NavLink to='/'>Home</NavLink>
+                      <NavLink to='/meganhallconsulting'>Home</NavLink>
                     </li>
                     <li>
                       <NavLink to='/about'>About</NavLink>
