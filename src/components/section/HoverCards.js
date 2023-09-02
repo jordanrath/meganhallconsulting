@@ -6,8 +6,7 @@ export const HoverCards = () => {
   return (
     <div className='hover-cards__section' data-aos="zoom-in-up">
       <div className='hover-cards__section-header'>
-        <h1 className='section-header__text'>The 8 Components of Healthy Living</h1>
-        <h1 className='section-header__period'>:</h1>
+        <h1 className='section-header__text' data-end=':'>The 8 Components of Healthy Living</h1>
       </div>
       <div className='hover-cards__container'>
         <div className='hover-cards__card-container'>

@@ -46,8 +46,7 @@ const SwiperFlow = () => {
     <>
         <div className='testimonial-section container' data-aos="zoom-in-up"> 
                 <div className='testimonial-title'>
-                    <h1>Testimonials</h1>
-                    <h1 className='testimonial-period'>:</h1>
+                    <h1 className='testimonial-title-attr' data-end=':'>Testimonials</h1>
                 </div>      
                 <div className='swiper-container'>
                     <Swiper

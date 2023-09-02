@@ -15,18 +15,17 @@ const MetabolicHealth = () => {
       <div className='home-top-text-container container' data-aos="zoom-in-up">
         <div className='home-top-text'>
           <h1 className='home-top-text__top'>Feel and perform better today…</h1>
-          <div className='home-top-text__bottom'>
-            <h1>and for the rest of your life</h1>
-            <h1 className='home-top-text__bottom-period'>.</h1>
+        <div className='home-top-text__bottom'>
+            <h1 className='home-top-text__h1' data-end='.'>and for the rest of your life</h1>
+        </div>
+        <div className='btn-cont'>
+          <h3>The journey to your best life begins now</h3>
+          <div className='box-1'>
+          <NavLink to='schedule'>
+            <button className='custom-btn btn' type='button'>Get Started!</button>
+          </NavLink>
           </div>
-          <div className='btn-cont'>
-            <h3>The journey to your best life begins now</h3>
-            <div className='box-1'>
-            <NavLink to='schedule'>
-              <button className='custom-btn btn' type='button'>Get Started!</button>
-            </NavLink>
-            </div>
-          </div>
+        </div>
         </div>
           <div className='expanding-card__container'>
             <div className={isClicked === 0 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(0)}>

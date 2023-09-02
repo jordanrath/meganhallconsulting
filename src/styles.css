@@ -417,9 +417,9 @@ p {
   font-size: 15px;
 }
 
-.menu__buttons li .active {
+/* .menu__buttons li .active {
   text-decoration: overline 2px var(--primary-variant-lm);
-}
+} */
 
 .menu-link-container {
   display: flex;
@@ -742,15 +742,15 @@ p {
   gap: 30px;
 }
 
-.home-top-container .home-top-text__bottom h1 {
-  display: unset;
+.home-top-text__h1::after {
+  content: attr(data-end);
+  color: var(--neutral-lm);
+}
+
+.home-top-text__bottom {
   color: var(--primary-variant-lm);
 }
 
-.home-top-container .home-top-text__bottom h1.home-top-text__bottom-period {
-display: unset;
-color: var(--neutral-lm);
-}
 
 .svg-container-bottom {
   z-index: 60;
@@ -773,9 +773,6 @@ color: var(--neutral-lm);
 
 .home-top-container h1 {
   line-height: 50px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   text-align: left;
   width: 400px;
   font-size: 55px;
@@ -847,7 +844,8 @@ color: var(--neutral-lm);
   color: var(--primary-variant-lm);
 }
 
-.section-header__period {
+.section-header__text::after {
+  content: attr(data-end);
   color: var(--neutral-lm);
 }
 
@@ -1115,7 +1113,8 @@ color: var(--neutral-lm);
   color: var(--primary-variant-lm);
 }
 
-.testimonial-title .testimonial-period {
+.testimonial-title-attr::after {
+  content: attr(data-end);
   color: var(--neutral-lm);
 }
 
@@ -2382,14 +2381,10 @@ body.dark-mode {
   color: var(--primary-variant-dm);
 }
 
-.dark-mode .home-top-container .home-top-text__bottom h1.home-top-text__bottom-period {
+.dark-mode .home-top-text__h1::after {
+  content: attr(data-end);
   color: var(--tertiary-variant-dm);
 }
-
-/* .dark-mode .btn {
-  background: linear-gradient(0deg, rgb(151, 115, 23) 0%, rgb(233, 196, 106) 100%);
-  color: var(--on-secondary);
-} */
 
 .dark-mode .custom-btn {
   color: var(--on-secondary);
@@ -2445,7 +2440,8 @@ body.dark-mode {
   color: var(--primary-variant-dm);
 }
 
-.dark-mode .section-header__period {
+.dark-mode .section-header__text::after {
+  content: attr(data-end);
   color: var(--tertiary-variant-dm);
 }
 
@@ -2465,7 +2461,8 @@ body.dark-mode {
   color: var(--primary-variant-dm);
 }
 
-.dark-mode .testimonial-title .testimonial-period {
+.dark-mode .testimonial-title-attr::after {
+  content: attr(data-end);
   color: var(--tertiary-variant-dm);
 }
 
@@ -2830,6 +2827,10 @@ li {
     flex-direction: column;
   }
 
+  .home-top-container {
+    padding-top: 0px;
+  }
+
   .home-top-text-container {
     margin-top: 150px;
   }
@@ -3134,10 +3135,6 @@ li {
 
   .home-top-container h1 {
     width: 100%;
-  }
-
-  .home-top-container .home-top-text__bottom h1.home-top-text__bottom-period {
-    padding: 0;
   }
 
   .coaching-info-content ul {
