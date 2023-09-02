@@ -1354,6 +1354,8 @@ color: var(--neutral-lm);
   justify-content: center;
   /* margin-top: 50px; */
   margin-bottom: 150px;
+  position: relative;
+  top: 0;
 }
 
 .about-container {
