@@ -1,11 +1,12 @@
 import React from 'react'
+import imageUtil from '../utils/imageUtil';
 
 const BlogContent = ({ image, info }) => {
   return (
     <>
-        <img src={image} alt={info}></img>
+        <img src={imageUtil(image)} alt={info}></img>
     </>
   )
 }
 
-export default BlogContent
+export default BlogContent;

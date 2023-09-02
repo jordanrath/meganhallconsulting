@@ -9,4 +9,4 @@ const PodcastContent = ({image, info}) => {
   )
 }
 
-export default PodcastContent
+export default PodcastContent;

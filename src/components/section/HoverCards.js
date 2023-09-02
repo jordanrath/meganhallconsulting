@@ -43,7 +43,7 @@ export const HoverCards = () => {
             </div>
           </div>
           <div className='hover-cards__card'>
-            <img alt='nutrition' src='/images/nutrition.jpg' />
+            <img alt='nutrition' src={imageUtil('/images/nutrition.jpg')} />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -53,7 +53,7 @@ export const HoverCards = () => {
             </div>
           </div>
           <div className='hover-cards__card'>
-            <img alt='supplements' src='/images/supplements.jpg' />
+            <img alt='supplements' src={imageUtil('/images/supplements.jpg')} />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -63,7 +63,7 @@ export const HoverCards = () => {
             </div>
           </div>
           <div className='hover-cards__card'>
-            <img alt='stress' src='/images/stress.jpg' />
+            <img alt='stress' src={imageUtil('/images/stress.jpg')} />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -73,7 +73,7 @@ export const HoverCards = () => {
             </div>
           </div>
           <div className='hover-cards__card'>
-            <img alt='social connection' src='/images/social-connection.jpg' />
+            <img alt='social connection' src={imageUtil('/images/social-connection.jpg')} />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -83,7 +83,7 @@ export const HoverCards = () => {
             </div>
           </div>
           <div className='hover-cards__card'>
-            <img alt='purpose' src='/images/purpose.jpg' />
+            <img alt='purpose' src={imageUtil('/images/purpose.jpg')} />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
