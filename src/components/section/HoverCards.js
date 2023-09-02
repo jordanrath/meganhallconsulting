@@ -33,7 +33,7 @@ export const HoverCards = () => {
             </div>
           </div>
           <div className='hover-cards__card'>
-            <img alt='exercise' src={imageUtil('images/exercise.jpg')} />
+            <img alt='exercise' src={imageUtil('/images/exercise.jpg')} />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
