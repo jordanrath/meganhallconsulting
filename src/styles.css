@@ -253,7 +253,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px 0px 30px;
+  padding: 0px 10px 0px 30px;
   background-color: var(--background-lm);
   height: 64px;
   position: -webkit-sticky;
@@ -1352,13 +1352,14 @@ color: var(--neutral-lm);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   margin-bottom: 150px;
 }
 
 .about-container {
   position: relative;
   width: 100%;
+  top: 0;
   background-color: var(--background-lm);
   text-align: start;
   display: flex;
@@ -3032,7 +3033,7 @@ li {
   }
 
   .home-top-container {
-    margin-top: 100px;
+    margin-top: 50px;
   }
 
   .home-top-text-container {
