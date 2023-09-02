@@ -11,8 +11,6 @@ export const HoverCards = () => {
       <div className='hover-cards__container'>
         <div className='hover-cards__card-container'>
           <div className='hover-cards__card circadian-alignment'>
-            {/* create util function to bake that infrom of img */}
-            {/* <img alt='' src='process.env.PUBLIC_URL + /images/sun.jpg' /> */}
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>

@@ -25,12 +25,12 @@ const SvgBanner = ({image, color, text}) => {
         return (
             <div className="banner" data-aos="fade-right">
                 <ul> 
-                   <li><a href="banner__image1"><img src="https://images.unsplash.com/photo-1599270606287-331b4f5d0e02?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" /></a></li>
-                   <li><a href="banner__image2"><img src="https://images.unsplash.com/photo-1588347818036-558601350947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" /></a></li>
-                   <li><a href="banner__image3"><img src="https://images.unsplash.com/photo-1526401485004-46910ecc8e51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" /></a></li>
-                   <li><a href="banner__image4"><img src="https://images.unsplash.com/photo-1566373049939-704ea187ef98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80" /></a></li>
-                   <li><a href="banner__image4"><img src="https://images.unsplash.com/photo-1518065896235-a4c93e088e7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" /></a></li>  
-                   <li><a href="banner__image4"><img src="https://images.unsplash.com/photo-1617372607364-f55cb6fa0502?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80" /></a></li>
+                   <li><a href="banner__image1"><img alt='svg' src="https://images.unsplash.com/photo-1599270606287-331b4f5d0e02?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" /></a></li>
+                   <li><a href="banner__image2"><img alt='svg' src="https://images.unsplash.com/photo-1588347818036-558601350947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" /></a></li>
+                   <li><a href="banner__image3"><img alt='svg' src="https://images.unsplash.com/photo-1526401485004-46910ecc8e51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" /></a></li>
+                   <li><a href="banner__image4"><img alt='svg' src="https://images.unsplash.com/photo-1566373049939-704ea187ef98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80" /></a></li>
+                   <li><a href="banner__image4"><img alt='svg' src="https://images.unsplash.com/photo-1518065896235-a4c93e088e7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" /></a></li>  
+                   <li><a href="banner__image4"><img alt='svg' src="https://images.unsplash.com/photo-1617372607364-f55cb6fa0502?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80" /></a></li>
                 </ul>
             </div>
             )

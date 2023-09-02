@@ -17,10 +17,6 @@ const Podcast = () => {
     }
   }, [])
 
-//use JS Joda zoned date time date formatter
-//debouncing npmdebounce
-//throttling
-
   const podcastSearch = useCallback((data, searchText) => {
     if (data.length === 0 || !searchText) {
       return [];
@@ -40,9 +36,7 @@ const Podcast = () => {
         <div className='podcast-header'>
           <h2>Podcast Episodes</h2>
           <div className='podcast-underline'></div>
-          {/* <div className='search-filter-container'> */}
             <SearchBar searchFunc={podcastSearch} renderFunc={podcastRenderer} data={podcasts} id='podcast-search' resultsId='podcast-search-results' placeholder='Search for an episode...'/>
-          {/* </div> */}
         </div>
         <FilterItems data={podcasts} header={header} desription={description} />
       </div>

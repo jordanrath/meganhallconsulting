@@ -25,7 +25,6 @@ const Navbar = () => {
   //offset the position
   let sticky = navbar.offsetTop;
 
-  //add the sticky class to the nav element when a scroll position is reached
   const stickyNav = () => {
     if (window.scrollY > sticky) {
       navbar.classList.add('sticky')
@@ -50,9 +49,6 @@ const Navbar = () => {
             <li>
               <NavLink to='/meganhallconsulting/schedule'>WORK WITH ME</NavLink>
             </li>
-            {/* <li>
-              <NavLink to='/podcast'>PODCAST</NavLink>
-            </li> */}
             <li>
               <NavLink to='/meganhallconsulting/blog'>BLOG</NavLink>
             </li>

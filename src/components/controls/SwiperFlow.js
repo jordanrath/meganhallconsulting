@@ -34,7 +34,6 @@ const SwiperFlow = () => {
                 </p>
             </div>
             <div className='testimonial-slide__signature'>
-                {/* <img alt='' src='/images/sun.jpg' /> */}
                 <div className='testimonial-slide__signature-text'>
                     <h3>Julie Feld</h3>
                     <p>Morrison, Colorado</p>

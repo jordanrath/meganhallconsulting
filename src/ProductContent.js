@@ -1,11 +1,9 @@
 import React from 'react'
-// import { useNavigate } from 'react-router-dom'
 
 const ProductContent = ({ image, info, link }) => {
-    // const navigate = useNavigate();
+
     const onClick = () => {
         window.open(link, '_blank');
-        // navigate(link, {replace: true})
     }
     return (
         <>
@@ -14,4 +12,4 @@ const ProductContent = ({ image, info, link }) => {
       )
 }
 
-export default ProductContent
+export default ProductContent;

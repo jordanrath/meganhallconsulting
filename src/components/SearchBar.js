@@ -3,7 +3,7 @@ import { emptyArr } from '../utils/funcUtils';
 
 const SearchBar = ({ id, placeholder, resultsId, data = {}, searchFunc = emptyArr, renderFunc = emptyArr }) => {
   const [searchText, setSearchText] = useState('');
-  //will run a memoized factory function and store the result as a variable, will only run when dependencies change.
+
   const matches = useMemo(() => {
     return searchFunc(data, searchText);
   }, [data, searchFunc, searchText]);
