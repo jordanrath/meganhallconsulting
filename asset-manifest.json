@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "./https://jordanrath.github.io/meganhallconsulting/static/css/main.7c05d415.css",
-    "main.js": "./https://jordanrath.github.io/meganhallconsulting/static/js/main.a85df081.js",
-    "index.html": "./https://jordanrath.github.io/meganhallconsulting/index.html",
-    "main.7c05d415.css.map": "./https://jordanrath.github.io/meganhallconsulting/static/css/main.7c05d415.css.map",
-    "main.a85df081.js.map": "./https://jordanrath.github.io/meganhallconsulting/static/js/main.a85df081.js.map"
+    "main.css": "./https://github.com/jordanrath.github.io/meganhallconsulting/static/css/main.7c05d415.css",
+    "main.js": "./https://github.com/jordanrath.github.io/meganhallconsulting/static/js/main.84dd76e7.js",
+    "index.html": "./https://github.com/jordanrath.github.io/meganhallconsulting/index.html",
+    "main.7c05d415.css.map": "./https://github.com/jordanrath.github.io/meganhallconsulting/static/css/main.7c05d415.css.map",
+    "main.84dd76e7.js.map": "./https://github.com/jordanrath.github.io/meganhallconsulting/static/js/main.84dd76e7.js.map"
   },
   "entrypoints": [
     "static/css/main.7c05d415.css",
-    "static/js/main.a85df081.js"
+    "static/js/main.84dd76e7.js"
   ]
 }
