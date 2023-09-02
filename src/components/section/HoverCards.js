@@ -1,4 +1,5 @@
 import React from 'react'
+import imageUtil from '../../utils/imageUtil';
 
 export const HoverCards = () => {
   
@@ -22,7 +23,7 @@ export const HoverCards = () => {
             </div>
           </div> 
           <div className='hover-cards__card'>
-            <img alt='' src='/images/movement.jpg' />
+            <img alt='movement' src='/images/movement.jpg' />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -32,7 +33,7 @@ export const HoverCards = () => {
             </div>
           </div>
           <div className='hover-cards__card'>
-            <img alt='' src='/images/exercise.jpg' />
+            <img alt='exercise' src={imageUtil('images/exercise.jpg')} />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -42,7 +43,7 @@ export const HoverCards = () => {
             </div>
           </div>
           <div className='hover-cards__card'>
-            <img alt='' src='/images/nutrition.jpg' />
+            <img alt='nutrition' src='/images/nutrition.jpg' />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -52,7 +53,7 @@ export const HoverCards = () => {
             </div>
           </div>
           <div className='hover-cards__card'>
-            <img alt='' src='/images/supplements.jpg' />
+            <img alt='supplements' src='/images/supplements.jpg' />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -62,7 +63,7 @@ export const HoverCards = () => {
             </div>
           </div>
           <div className='hover-cards__card'>
-            <img alt='' src='/images/stress.jpg' />
+            <img alt='stress' src='/images/stress.jpg' />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -72,7 +73,7 @@ export const HoverCards = () => {
             </div>
           </div>
           <div className='hover-cards__card'>
-            <img alt='' src='/images/social-connection.jpg' />
+            <img alt='social connection' src='/images/social-connection.jpg' />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -82,7 +83,7 @@ export const HoverCards = () => {
             </div>
           </div>
           <div className='hover-cards__card'>
-            <img alt='' src='/images/purpose.jpg' />
+            <img alt='purpose' src='/images/purpose.jpg' />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>

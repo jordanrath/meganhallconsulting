@@ -1,10 +1,6 @@
-import React from 'react'
+const imageUtil = (imageURL) => {
 
-const imageUtil = () => {
-
-  return (
-    <div>imageUtil</div>
-  )
+  return `%PUBLIC_URL%/${imageURL}`
 }
 
 export default imageUtil;
