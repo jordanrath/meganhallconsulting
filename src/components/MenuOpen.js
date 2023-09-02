@@ -23,19 +23,19 @@ const MenuOpen = (props) => {
                       <NavLink to='/meganhallconsulting'>Home</NavLink>
                     </li>
                     <li>
-                      <NavLink to='/about'>About</NavLink>
+                      <NavLink to='/meganhallconsulting/about'>About</NavLink>
                     </li>
                     <li>
-                      <NavLink to='/schedule'>Work With Me</NavLink>
+                      <NavLink to='/meganhallconsulting/schedule'>Work With Me</NavLink>
                     </li>
                     <li>
-                      <NavLink to='/blog'>Blog</NavLink>
+                      <NavLink to='/meganhallconsulting/blog'>Blog</NavLink>
                     </li>
                     <li>
-                      <NavLink to='/products'>Products</NavLink>
+                      <NavLink to='/meganhallconsulting/products'>Products</NavLink>
                     </li>
                     <li>
-                      <NavLink to='/contact'>Contact</NavLink>
+                      <NavLink to='/meganhallconsulting/contact'>Contact</NavLink>
                     </li>
                 </ul>
             </button>
