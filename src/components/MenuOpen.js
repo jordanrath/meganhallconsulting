@@ -68,16 +68,6 @@ const MenuOpen = (props) => {
                         transition: 'left .7s ease-in-out'
                       }}
                     >
-                      <NavLink to='/meganhallconsulting/products'>Products</NavLink>
-                    </li>
-                    <li
-                      style={{
-                        position: 'relative',
-                        left: menuOpen ? '-140px' : '-110px',
-                        transform: 'translateX(120px)',
-                        transition: 'left .8s ease-in-out'
-                      }}
-                    >
                       <NavLink to='/meganhallconsulting/contact'>Contact</NavLink>
                     </li>
                 </ul>
