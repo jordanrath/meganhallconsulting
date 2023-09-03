@@ -28,7 +28,7 @@ const MenuOpen = (props) => {
                         transition: 'left .3s ease-in-out'
                       }}
                     >
-                      <NavLink to='/meganhallconsulting'>Home</NavLink>
+                      <NavLink to='/meganhallconsulting/'>Home</NavLink>
                     </li>
                     <li
                       style={{

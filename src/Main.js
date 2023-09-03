@@ -30,7 +30,7 @@ function Main() {
       <div className="main">
         <Navbar />
         <Routes>
-          <Route path='/meganhallconsulting' element={<Home />} />
+          <Route path='/meganhallconsulting/' element={<Home />} />
           <Route path='/meganhallconsulting/about' element={<About />} />
           <Route path='/meganhallconsulting/schedule' element={<Schedule />} />
           <Route path='/meganhallconsulting/contact' element={<Contact />} />

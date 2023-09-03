@@ -2791,6 +2791,10 @@ li {
   .home-top-container {
     margin-top: 0;
   }
+  
+  .home-top-text-container {
+    margin-top: 50px;
+  }
 }
 
 @media only screen and (max-width: 601px) {

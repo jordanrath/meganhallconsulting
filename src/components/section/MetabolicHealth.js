@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import imageUtil from '../../utils/imageUtil';
 
@@ -10,6 +10,18 @@ const MetabolicHealth = () => {
     setIsClicked(divClicked);
     console.log(isClicked)
   };
+
+  const [isDesktop, setisDesktop] = useState(window.innerWidth > 601);
+
+  const updateMediaQuery = () => {
+    setisDesktop(window.innerWidth > 601);
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', updateMediaQuery);
+    return () => window.removeEventListener('resize', updateMediaQuery);
+  });
+
 
   return (
     <div className='home-top-container'>
@@ -30,7 +42,14 @@ const MetabolicHealth = () => {
         </div>
           <div className='expanding-card__container'>
             <div className={isClicked === 0 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(0)}>
-            <img alt='' src={imageUtil('/images/performance.avif')} />
+            <img 
+              alt='' 
+              src={isDesktop ?
+                imageUtil('/images/performance.jpg')
+                :
+                imageUtil('/images/performance-mobile.jpg')
+              } 
+            />
               <div className='expanding-card__clicked'>
                 <div className='expanding-card__text'>
                   <span className="material-symbols-outlined performance">
@@ -42,7 +61,14 @@ const MetabolicHealth = () => {
               </div>
             </div>
             <div className={isClicked === 1 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(1)}>
-            <img alt='' src={imageUtil('/images/health.avif')} />
+            <img 
+              alt='' 
+              src={isDesktop ?
+                imageUtil('/images/health.jpg')
+                :
+                imageUtil('/images/health-mobile.jpg')
+              } 
+            />
               <div className='expanding-card__clicked'>
                 <div className='expanding-card__text'>
                   <span className="material-symbols-outlined healthspan">
@@ -54,7 +80,14 @@ const MetabolicHealth = () => {
               </div>
             </div>
             <div className={isClicked === 2 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(2)}>
-            <img alt='' src={imageUtil('/images/stress.jpg')} />
+            <img 
+              alt='' 
+              src={isDesktop ?
+                imageUtil('/images/stress.jpg')
+                :
+                imageUtil('/images/stress-mobile.jpg')
+              } 
+            />
               <div className='expanding-card__clicked'>
                 <div className='expanding-card__text'>
                   <span className="material-symbols-outlined longevity">
