@@ -12,7 +12,8 @@ const MenuOpen = (props) => {
         <div
             className='menu__overlay'
             style={{
-                top: menuOpen ? "0px" : "-105vh",
+                top: menuOpen ? "0px" : "0px",
+                left: menuOpen ? "0px" : "-105vw",
                 transitionDelay: menuOpen ? '0s' : '0s'
               }
             }
@@ -24,7 +25,7 @@ const MenuOpen = (props) => {
                         position: 'relative',
                         left: menuOpen ? '-120px' : '0px',
                         transform: 'translateX(120px)',
-                        transition: 'left 2s ease-in-out'
+                        transition: 'left .3s ease-in-out'
                       }}
                     >
                       <NavLink to='/meganhallconsulting'>Home</NavLink>
@@ -32,9 +33,9 @@ const MenuOpen = (props) => {
                     <li
                       style={{
                         position: 'relative',
-                        left: menuOpen ? '-120px' : '0px',
+                        left: menuOpen ? '-120px' : '-50px',
                         transform: 'translateX(120px)',
-                        transition: 'left 1.8s ease-in-out'
+                        transition: 'left .4s ease-in-out'
                       }}
                     >
                       <NavLink to='/meganhallconsulting/about'>About</NavLink>
@@ -42,9 +43,9 @@ const MenuOpen = (props) => {
                     <li
                       style={{
                         position: 'relative',
-                        left: menuOpen ? '-120px' : '0px',
+                        left: menuOpen ? '-120px' : '-50px',
                         transform: 'translateX(120px)',
-                        transition: 'left 1.6s ease-in-out'
+                        transition: 'left .5s ease-in-out'
                       }}
                     >
                       <NavLink to='/meganhallconsulting/schedule'>Work With Me</NavLink>
@@ -52,9 +53,9 @@ const MenuOpen = (props) => {
                     <li
                       style={{
                         position: 'relative',
-                        left: menuOpen ? '-120px' : '0px',
+                        left: menuOpen ? '-120px' : '-50px',
                         transform: 'translateX(120px)',
-                        transition: 'left 1.4s ease-in-out'
+                        transition: 'left .6s ease-in-out'
                       }}
                     >
                       <NavLink to='/meganhallconsulting/blog'>Blog</NavLink>
@@ -62,9 +63,9 @@ const MenuOpen = (props) => {
                     <li
                       style={{
                         position: 'relative',
-                        left: menuOpen ? '-120px' : '0px',
+                        left: menuOpen ? '-120px' : '-50px',
                         transform: 'translateX(120px)',
-                        transition: 'left 1.2s ease-in-out'
+                        transition: 'left .7s ease-in-out'
                       }}
                     >
                       <NavLink to='/meganhallconsulting/products'>Products</NavLink>
@@ -72,9 +73,9 @@ const MenuOpen = (props) => {
                     <li
                       style={{
                         position: 'relative',
-                        left: menuOpen ? '-120px' : '0px',
+                        left: menuOpen ? '-120px' : '-50px',
                         transform: 'translateX(120px)',
-                        transition: 'left 1s ease-in-out'
+                        transition: 'left .8s ease-in-out'
                       }}
                     >
                       <NavLink to='/meganhallconsulting/contact'>Contact</NavLink>
