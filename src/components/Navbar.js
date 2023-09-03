@@ -53,9 +53,6 @@ const Navbar = () => {
               <NavLink to='/meganhallconsulting/blog'>BLOG</NavLink>
             </li>
             <li>
-              <NavLink to='/meganhallconsulting/products'>PRODUCTS</NavLink>
-            </li>
-            <li>
               <NavLink to='/meganhallconsulting/contact'>CONTACT</NavLink>
             </li>
             <li>

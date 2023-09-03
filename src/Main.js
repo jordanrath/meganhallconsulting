@@ -8,8 +8,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Schedule from './pages/Schedule';
 import Contact from './pages/Contact';
-import Products from './pages/Products';
-import Podcast from './pages/Podcast';
 import Blog from './pages/Blog';
 import Testimonials from './components/section/Testimonials';
 import Footer from './components/Footer';
@@ -36,8 +34,6 @@ function Main() {
           <Route path='/meganhallconsulting/about' element={<About />} />
           <Route path='/meganhallconsulting/schedule' element={<Schedule />} />
           <Route path='/meganhallconsulting/contact' element={<Contact />} />
-          <Route path='/meganhallconsulting/products' element={<Products />} />
-          <Route path='/meganhallconsulting/podcast' element={<Podcast />} />
           <Route path='/meganhallconsulting/blog' element={<Blog />} />
           <Route path='/meganhallconsulting/testimonials' element={<Testimonials />} />
           <Route path='/meganhallconsulting/policies' element={<Policies />} />

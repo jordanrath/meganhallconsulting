@@ -34,7 +34,6 @@ const Blog = () => {
         <div className='blog-header'>
           <h1>The Blog</h1>
           <div className='blog-underline'></div>
-          <SearchBar searchFunc={blogSearch} renderFunc={blogArticleRenderer} data={blogs} id='blog-search' resultsId='blog-search-results' placeholder='Search for an article...'/>
         </div>
         <FilterItems data={blogs} key={blogs.articleId} />
       </div>

@@ -23,7 +23,7 @@ const MenuOpen = (props) => {
                     <li
                       style={{
                         position: 'relative',
-                        left: menuOpen ? '-120px' : '0px',
+                        left: menuOpen ? '-140px' : '-110px',
                         transform: 'translateX(120px)',
                         transition: 'left .3s ease-in-out'
                       }}
@@ -33,7 +33,7 @@ const MenuOpen = (props) => {
                     <li
                       style={{
                         position: 'relative',
-                        left: menuOpen ? '-120px' : '-50px',
+                        left: menuOpen ? '-140px' : '-110px',
                         transform: 'translateX(120px)',
                         transition: 'left .4s ease-in-out'
                       }}
@@ -43,7 +43,7 @@ const MenuOpen = (props) => {
                     <li
                       style={{
                         position: 'relative',
-                        left: menuOpen ? '-120px' : '-50px',
+                        left: menuOpen ? '-140px' : '-110px',
                         transform: 'translateX(120px)',
                         transition: 'left .5s ease-in-out'
                       }}
@@ -53,7 +53,7 @@ const MenuOpen = (props) => {
                     <li
                       style={{
                         position: 'relative',
-                        left: menuOpen ? '-120px' : '-50px',
+                        left: menuOpen ? '-140px' : '-110px',
                         transform: 'translateX(120px)',
                         transition: 'left .6s ease-in-out'
                       }}
@@ -63,7 +63,7 @@ const MenuOpen = (props) => {
                     <li
                       style={{
                         position: 'relative',
-                        left: menuOpen ? '-120px' : '-50px',
+                        left: menuOpen ? '-140px' : '-110px',
                         transform: 'translateX(120px)',
                         transition: 'left .7s ease-in-out'
                       }}
@@ -73,7 +73,7 @@ const MenuOpen = (props) => {
                     <li
                       style={{
                         position: 'relative',
-                        left: menuOpen ? '-120px' : '-50px',
+                        left: menuOpen ? '-140px' : '-110px',
                         transform: 'translateX(120px)',
                         transition: 'left .8s ease-in-out'
                       }}

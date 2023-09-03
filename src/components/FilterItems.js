@@ -73,7 +73,6 @@ const FilterItems = ({ data = {}, key = '', description = '', header = '' }) => 
 
   return (
     <>
-        <HandleFilterClick />
         <div className='podcast-filtered-items'>
             <div className='podcast-container'> 
                 {filteredItems}        
