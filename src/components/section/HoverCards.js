@@ -39,7 +39,7 @@ export const HoverCards = () => {
               </div>
             </div>
           </div>
-          <div className='hover-cards__card'>
+          <div className='hover-cards__card nutrition'>
             <img alt='nutrition' src={imageUtil('/images/nutrition.jpg')} />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>

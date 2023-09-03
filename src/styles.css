@@ -615,8 +615,7 @@ p {
   line-height: 42px;
   padding: 0;
   border: none;
-  background: rgb(231, 111, 81);
-  background: linear-gradient(0deg, rgb(231, 111, 81) 0%, rgb(244, 162, 97) 100%);
+  background: var(--secondary-lm);
 }
 
 .btn:hover {
@@ -855,6 +854,24 @@ p {
   background-image: url("https://images.unsplash.com/photo-1591476422303-f12ab03303d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80");
   background-size: 250px;
 }
+
+/* .hover-cards__card.nutrition {
+  width: 250px;
+  min-height: 340px;
+  z-index: 0;
+  transition: all 0.5s;
+  background-image: url("/images/nutrition.jpg");
+  background-size: 550px;
+}
+
+.hover-cards__card.nutrition:hover {
+  width: 250px;
+  min-height: 340px;
+  z-index: 0;
+  transition: all 0.5s;
+  background-image: url("https://images.unsplash.com/photo-1591476422303-f12ab03303d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80");
+  background-size: 250px;
+} */
 
 .hover-cards__text-container {
   width: 100%;
@@ -2308,7 +2325,7 @@ body.dark-mode {
 }
 
 .dark-mode .btn {
-  background: linear-gradient(0deg, rgb(98, 213, 200) 0%, rgb(171, 204, 216) 90%);
+  background: var(--primary-dm);
 }
 
 .dark-mode .btn:hover {
@@ -2791,7 +2808,7 @@ li {
   .home-top-container {
     margin-top: 0;
   }
-  
+
   .home-top-text-container {
     margin-top: 50px;
   }

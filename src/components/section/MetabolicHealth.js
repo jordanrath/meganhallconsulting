@@ -83,9 +83,9 @@ const MetabolicHealth = () => {
             <img 
               alt='' 
               src={isDesktop ?
-                imageUtil('/images/stress.jpg')
+                imageUtil('/images/longevity.jpg')
                 :
-                imageUtil('/images/stress-mobile.jpg')
+                imageUtil('/images/longevity-mobile.jpg')
               } 
             />
               <div className='expanding-card__clicked'>
