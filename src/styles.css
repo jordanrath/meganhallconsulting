@@ -219,7 +219,7 @@ p {
 }
 
 .nav a::before,
-.sticky::before {
+.nav a.sticky::before {
   content: "";
   position: absolute;
   display: block;
@@ -233,7 +233,7 @@ p {
 }
 
 .nav a:hover::before,
-.sticky::before {
+.nav a.sticky::before {
   transform: scaleX(1);
 }
 
