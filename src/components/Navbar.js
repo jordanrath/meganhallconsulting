@@ -39,9 +39,11 @@ const Navbar = () => {
       {isDesktop ? (
         <nav className='nav' id='nav' data-aos="fade-down">
           <ul>
-            <li className='site-title-container'>
-              <Link to='/meganhallconsulting' className='site-title'>Megan Hall Consulting</Link>
-              <Link to='/meganhallconsulting' className='site-title-quote'>The applied science of limitless health and performance</Link>
+            <li >
+              <Link className='site-title-container' to='/meganhallconsulting'>
+                <h1 className='site-title'>Megan Hall Consulting</h1>
+                <p className='site-title-quote'>The applied science of limitless health and performance</p>
+              </Link>
             </li>
             <li>
               <NavLink to='/meganhallconsulting/about'>ABOUT</NavLink>

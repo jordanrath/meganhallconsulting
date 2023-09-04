@@ -41,26 +41,7 @@ const MetabolicHealth = () => {
         </div>
         </div>
           <div className='expanding-card__container'>
-            <div className={isClicked === 0 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(0)}>
-            <img 
-              alt='' 
-              src={isDesktop ?
-                imageUtil('/images/performance.jpg')
-                :
-                imageUtil('/images/performance-mobile.jpg')
-              } 
-            />
-              <div className='expanding-card__clicked'>
-                <div className='expanding-card__text'>
-                  <span className="material-symbols-outlined performance">
-                    sprint
-                  </span>
-                  <h2>Performance</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                </div>
-              </div>
-            </div>
-            <div className={isClicked === 1 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(1)}>
+          <div className={isClicked === 0 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(0)}>
             <img 
               alt='' 
               src={isDesktop ?
@@ -75,6 +56,25 @@ const MetabolicHealth = () => {
                     heart_plus
                   </span>
                   <h2>Health</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                </div>
+              </div>
+            </div>
+            <div className={isClicked === 1 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(1)}>
+            <img 
+              alt='' 
+              src={isDesktop ?
+                imageUtil('/images/performance.jpg')
+                :
+                imageUtil('/images/performance-mobile.jpg')
+              } 
+            />
+              <div className='expanding-card__clicked'>
+                <div className='expanding-card__text'>
+                  <span className="material-symbols-outlined performance">
+                    sprint
+                  </span>
+                  <h2>Performance</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                 </div>
               </div>
