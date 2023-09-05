@@ -1,0 +1,2 @@
+Scroll to with focus on expandable cards.
+Potentially look into defeating browser forced dark mode.

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import imageUtil from '../../utils/imageUtil';
 
@@ -6,22 +6,25 @@ import imageUtil from '../../utils/imageUtil';
 const MetabolicHealth = () => {
   const [isClicked, setIsClicked] = useState(0);
 
-  const handleClick = (divClicked) => ()  => {  
+  const ref = useRef(null);
+
+  const handleClick = (divClicked) => ()  => { 
     setIsClicked(divClicked);
     console.log(isClicked)
+    ref.current?.scrollIntoView({ behavior: 'smooth' })
+    // e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const [isDesktop, setisDesktop] = useState(window.innerWidth > 601);
 
   const updateMediaQuery = () => {
     setisDesktop(window.innerWidth > 601);
-  }
+  };
 
   useEffect(() => {
     window.addEventListener('resize', updateMediaQuery);
     return () => window.removeEventListener('resize', updateMediaQuery);
   });
-
 
   return (
     <div className='home-top-container'>
@@ -41,7 +44,7 @@ const MetabolicHealth = () => {
         </div>
         </div>
           <div className='expanding-card__container'>
-          <div className={isClicked === 0 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(0)}>
+          <div id='0' ref={ref} className={isClicked === 0 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(0)}>
             <img 
               alt='' 
               src={isDesktop ?
@@ -60,7 +63,7 @@ const MetabolicHealth = () => {
                 </div>
               </div>
             </div>
-            <div className={isClicked === 1 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(1)}>
+            <div id='1' className={isClicked === 1 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(1)}>
             <img 
               alt='' 
               src={isDesktop ?
@@ -79,7 +82,7 @@ const MetabolicHealth = () => {
                 </div>
               </div>
             </div>
-            <div className={isClicked === 2 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(2)}>
+            <div id='2' className={isClicked === 2 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(2)}>
             <img 
               alt='' 
               src={isDesktop ?
