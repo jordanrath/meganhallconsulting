@@ -5,17 +5,14 @@ import imageUtil from '../../utils/imageUtil';
 
 const MetabolicHealth = () => {
   const [isClicked, setIsClicked] = useState(0);
-
+  const [isDesktop, setisDesktop] = useState(window.innerWidth > 601);
   const ref = useRef(null);
+  
 
   const handleClick = (divClicked) => ()  => { 
     setIsClicked(divClicked);
-    console.log(isClicked)
-    ref.current?.scrollIntoView({ behavior: 'smooth' })
-    // e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return (!isDesktop ? ref.current?.scrollIntoView({ behavior: 'smooth' }) : null)
   };
-
-  const [isDesktop, setisDesktop] = useState(window.innerWidth > 601);
 
   const updateMediaQuery = () => {
     setisDesktop(window.innerWidth > 601);
