@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import imageUtil from '../../utils/imageUtil';
 
 export const HoverCards = () => {
+  const [hover, setHover] = useState('');
   
   return (
     <div className='hover-cards__section' data-aos="zoom-in-up">
@@ -10,7 +11,22 @@ export const HoverCards = () => {
       </div>
       <div className='hover-cards__container'>
         <div className='hover-cards__card-container'>
-          <div className='hover-cards__card circadian-alignment'>
+          <div id='sun'
+            className='hover-cards__card' 
+            onMouseOver={() => setHover('moon')}
+            onMouseOut={() => setHover('')}
+          >
+            <img 
+              alt='nutrition' 
+              src={(hover === 'moon' ? 
+                imageUtil('/images/moon.jpg') 
+                : 
+                imageUtil('/images/sun.jpg')
+              )}
+              style={{
+                transition: 'all 0.5s'
+              }} 
+            />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -39,8 +55,22 @@ export const HoverCards = () => {
               </div>
             </div>
           </div>
-          <div className='hover-cards__card nutrition'>
-            <img alt='nutrition' src={imageUtil('/images/nutrition.jpg')} />
+          <div 
+            className='hover-cards__card' 
+            onMouseOver={() => setHover('nutrition')}
+            onMouseOut={() => setHover('')}
+          >
+            <img 
+              alt='nutrition' 
+              src={(hover === 'nutrition' ? 
+                imageUtil('/images/nutrition2.jpg') 
+                : 
+                imageUtil('/images/nutrition.jpg')
+              )}
+              style={{
+                transition: 'all 0.5s'
+              }} 
+            />
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>

@@ -33,6 +33,7 @@ const Blog = () => {
       <div className='blog-page' data-aos='fade-out'>
         <div className='blog-header'>
           <h1>The Blog</h1>
+          {/* <SearchBar searchFunc={blogSearch} renderFunc={blogArticleRenderer} data={blogs} id='blog-search' resultsId='blog-search-results' placeholder='Search for an article...' /> */}
           <div className='blog-underline'></div>
         </div>
         <FilterItems data={blogs} key={blogs.articleId} />

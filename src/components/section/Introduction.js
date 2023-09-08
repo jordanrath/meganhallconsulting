@@ -2,6 +2,7 @@ import React from 'react'
 import imageUtil from '../../utils/imageUtil';
 
 const Introduction = () => {
+
   return (
     <div className='introduction-section'>
       <div className='introduction-container'>

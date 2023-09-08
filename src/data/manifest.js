@@ -61,8 +61,6 @@ const manifest = {
             "category": ['all', 'Testing', 'Other']
         }
     ],
-    
-    "productLists": []
 }
 
 export default manifest;

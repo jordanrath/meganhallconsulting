@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import imageUtil from '../../utils/imageUtil';
 
 
-const MetabolicHealth = () => {
+const GettingStarted = () => {
   const [isClicked, setIsClicked] = useState(0);
   const [isDesktop, setisDesktop] = useState(window.innerWidth > 601);
   const ref = useRef(null);
@@ -104,4 +104,4 @@ const MetabolicHealth = () => {
   )
 }
 
-export default MetabolicHealth;
+export default GettingStarted;
