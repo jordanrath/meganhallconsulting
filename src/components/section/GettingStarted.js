@@ -1,12 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import imageUtil from '../../utils/imageUtil';
+import { useInView } from 'react-intersection-observer';
 
 
 const GettingStarted = () => {
   const [isClicked, setIsClicked] = useState(0);
   const [isDesktop, setisDesktop] = useState(window.innerWidth > 601);
-  const ref = useRef(null);
+  // const ref = useRef(null);
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    fallbackInView: true,
+  });
   
 
   const handleClick = (divClicked) => ()  => { 
@@ -41,15 +47,23 @@ const GettingStarted = () => {
         </div>
         </div>
           <div className='expanding-card__container'>
-          <div id='0' ref={ref} className={isClicked === 0 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(0)}>
-            <img 
-              alt='' 
-              src={isDesktop ?
-                imageUtil('/images/health.jpg')
-                :
-                imageUtil('/images/health-mobile.jpg')
-              } 
-            />
+          <div 
+            id='0' 
+            ref={ref} 
+            className={isClicked === 0 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(0)}
+          >
+            {inView ?
+              <img 
+                alt='' 
+                src={isDesktop ?
+                  imageUtil('/images/health.jpg')
+                  :
+                  imageUtil('/images/health-mobile.jpg')
+                } 
+              />
+            :
+              null
+            }
               <div className='expanding-card__clicked'>
                 <div className='expanding-card__text'>
                   <span className="material-symbols-outlined healthspan">
@@ -60,15 +74,22 @@ const GettingStarted = () => {
                 </div>
               </div>
             </div>
-            <div id='1' className={isClicked === 1 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(1)}>
-            <img 
-              alt='' 
-              src={isDesktop ?
-                imageUtil('/images/performance.jpg')
-                :
-                imageUtil('/images/performance-mobile.jpg')
-              } 
-            />
+            <div 
+              id='1' 
+              className={isClicked === 1 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(1)}
+            >
+            {inView ?
+              <img 
+                alt='' 
+                src={isDesktop ?
+                  imageUtil('/images/performance.jpg')
+                  :
+                  imageUtil('/images/performance-mobile.jpg')
+                } 
+              />
+            :
+              null
+            }
               <div className='expanding-card__clicked'>
                 <div className='expanding-card__text'>
                   <span className="material-symbols-outlined performance">
@@ -79,15 +100,22 @@ const GettingStarted = () => {
                 </div>
               </div>
             </div>
-            <div id='2' className={isClicked === 2 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(2)}>
-            <img 
-              alt='' 
-              src={isDesktop ?
-                imageUtil('/images/longevity.jpg')
-                :
-                imageUtil('/images/longevity-mobile.jpg')
-              } 
-            />
+            <div 
+              id='2' 
+              className={isClicked === 2 ? 'expanding-card active' : 'expanding-card'} onClick={handleClick(2)}
+            >
+            {inView ?
+              <img 
+                alt='' 
+                src={isDesktop ?
+                  imageUtil('/images/longevity.jpg')
+                  :
+                  imageUtil('/images/longevity-mobile.jpg')
+                } 
+              />
+            :
+              null
+            }
               <div className='expanding-card__clicked'>
                 <div className='expanding-card__text'>
                   <span className="material-symbols-outlined longevity">

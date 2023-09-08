@@ -1,8 +1,14 @@
 import React, { useState } from 'react'
 import imageUtil from '../../utils/imageUtil';
+import { useInView } from 'react-intersection-observer';
 
 export const HoverCards = () => {
   const [hover, setHover] = useState('');
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    fallbackInView: true,
+  });
   
   return (
     <div className='hover-cards__section' data-aos="zoom-in-up">
@@ -11,22 +17,28 @@ export const HoverCards = () => {
       </div>
       <div className='hover-cards__container'>
         <div className='hover-cards__card-container'>
-          <div id='sun'
+          <div
+            ref={ref} 
+            id='sun'
             className='hover-cards__card' 
             onMouseOver={() => setHover('moon')}
             onMouseOut={() => setHover('')}
           >
-            <img 
-              alt='nutrition' 
-              src={(hover === 'moon' ? 
-                imageUtil('/images/moon.jpg') 
-                : 
-                imageUtil('/images/sun.jpg')
-              )}
-              style={{
-                transition: 'all 0.5s'
-              }} 
-            />
+            {inView ? 
+              <img 
+                alt='nutrition' 
+                src={(hover === 'moon' ? 
+                  imageUtil('/images/moon.jpg') 
+                  : 
+                  imageUtil('/images/sun.jpg')
+                )}
+                style={{
+                  transition: 'all 0.5s'
+                }} 
+              />
+            : 
+              null
+            } 
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -35,8 +47,15 @@ export const HoverCards = () => {
               </div>
             </div>
           </div> 
-          <div className='hover-cards__card'>
-            <img alt='movement' src={imageUtil('/images/movement.jpg')} />
+          <div 
+            ref={ref}
+            className='hover-cards__card'
+          >
+            {inView ? 
+              <img alt='movement' src={imageUtil('/images/movement.jpg')} /> 
+            : 
+              null
+            } 
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -45,8 +64,15 @@ export const HoverCards = () => {
               </div>
             </div>
           </div>
-          <div className='hover-cards__card'>
-            <img alt='exercise' src={imageUtil('/images/exercise.jpg')} />
+          <div 
+            ref={ref}
+            className='hover-cards__card'
+          >
+            {inView ? 
+              <img alt='exercise' src={imageUtil('/images/exercise.jpg')} /> 
+            : 
+              null
+            } 
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -55,22 +81,27 @@ export const HoverCards = () => {
               </div>
             </div>
           </div>
-          <div 
+          <div
+            ref={ref} 
             className='hover-cards__card' 
             onMouseOver={() => setHover('nutrition')}
             onMouseOut={() => setHover('')}
           >
-            <img 
-              alt='nutrition' 
-              src={(hover === 'nutrition' ? 
-                imageUtil('/images/nutrition2.jpg') 
-                : 
-                imageUtil('/images/nutrition.jpg')
-              )}
-              style={{
-                transition: 'all 0.5s'
-              }} 
-            />
+            {inView ? 
+              <img 
+                alt='nutrition' 
+                src={(hover === 'nutrition' ? 
+                  imageUtil('/images/nutrition2.jpg') 
+                  : 
+                  imageUtil('/images/nutrition.jpg')
+                )}
+                style={{
+                  transition: 'all 0.5s'
+                }} 
+              />
+            : 
+              null
+            } 
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -79,8 +110,15 @@ export const HoverCards = () => {
               </div>
             </div>
           </div>
-          <div className='hover-cards__card'>
-            <img alt='supplements' src={imageUtil('/images/supplements.jpg')} />
+          <div 
+            ref={ref}
+            className='hover-cards__card'
+          >
+            {inView ? 
+              <img alt='supplements' src={imageUtil('/images/supplements.jpg')} />
+            : 
+              null
+            } 
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -89,8 +127,15 @@ export const HoverCards = () => {
               </div>
             </div>
           </div>
-          <div className='hover-cards__card'>
-            <img alt='stress' src={imageUtil('/images/stress.jpg')} />
+          <div 
+            ref={ref}
+            className='hover-cards__card'
+          >
+            {inView ? 
+              <img alt='stress' src={imageUtil('/images/stress.jpg')} />
+            : 
+              null
+            } 
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -99,8 +144,15 @@ export const HoverCards = () => {
               </div>
             </div>
           </div>
-          <div className='hover-cards__card'>
-            <img alt='social connection' src={imageUtil('/images/social-connection.jpg')} />
+          <div 
+            ref={ref}
+            className='hover-cards__card'
+          >
+            {inView ? 
+              <img alt='social connection' src={imageUtil('/images/social-connection.jpg')} />
+            : 
+              null
+            } 
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
@@ -109,8 +161,15 @@ export const HoverCards = () => {
               </div>
             </div>
           </div>
-          <div className='hover-cards__card'>
-            <img alt='purpose' src={imageUtil('/images/purpose.jpg')} />
+          <div 
+            ref={ref}
+            className='hover-cards__card'
+          >
+            {inView ? 
+              <img alt='purpose' src={imageUtil('/images/purpose.jpg')} />
+            : 
+              null
+            } 
             <div className='shadow'></div>
             <div className='hover-cards__text-container'>
               <div className='hover-cards__text'>
