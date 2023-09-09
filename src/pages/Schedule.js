@@ -14,6 +14,7 @@ export const Schedule = () => {
           width="100%" 
           height="800" 
           loading="lazy" 
+          frameBorder="0"
         >
         </iframe>
       </div>
