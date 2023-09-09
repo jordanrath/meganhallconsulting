@@ -5,7 +5,10 @@ const PodcastContent = ({image, info}) => {
 
   return (
     <>
-        <img src={imageUtil(image)} alt={info}></img>
+        <img 
+          src={imageUtil(image)} 
+          alt={info}>
+        </img>
     </>
   )
 }
