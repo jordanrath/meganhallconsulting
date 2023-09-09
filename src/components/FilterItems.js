@@ -25,14 +25,22 @@ const FilterItems = ({ data = {}, key = '' }) => {
         const filteredItems = useMemo(() => {
             return displayed.map(item =>
                 item.filtered === true ?
-                    <div key={item.title} className='blog-content'>
+                    <div 
+                        key={item.title} 
+                        className='blog-content'>
                         <span>
                             <PodcastContent image={item.image}/>
                             <div className='blog-content-text'>
                                 <h4>{item.header}</h4>
                                 <p>{item.description}</p>
                                 <div>
-                                    <button href='#' target='_blank' rel='norefferrer'>Read</button>
+                                    <button 
+                                        href='#' 
+                                        target='_blank' 
+                                        rel='norefferrer'
+                                    >
+                                        Read
+                                    </button>
                                 </div>
                             </div>
                         </span>

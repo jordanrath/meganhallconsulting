@@ -13,7 +13,8 @@ const BlogContent = ({ image, info }) => {
       {inView ?
         <img 
           src={imageUtil({image})} 
-          alt={info}>
+          alt={info}
+        >
         </img>
       :
         null
