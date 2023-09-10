@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import imageUtil from '../../utils/imageUtil';
 import { useInView } from 'react-intersection-observer';
 
 export const HoverCards = () => {
-  const [hover, setHover] = useState('');
-
   const { ref, inView } = useInView({
     triggerOnce: true,
     fallbackInView: true,
@@ -21,21 +19,12 @@ export const HoverCards = () => {
             ref={ref} 
             id='sun'
             className='hover-cards__card' 
-            onMouseOver={() => setHover('moon')}
-            onMouseOut={() => setHover('')}
           >
             {inView ? 
-              <img 
-                alt='nutrition' 
-                src={(hover === 'moon' ? 
-                  imageUtil('/images/moon.jpg') 
-                  : 
-                  imageUtil('/images/sun.jpg')
-                )}
-                style={{
-                  transition: 'all 0.5s'
-                }} 
-              />
+              <div className='image-wrapper'>
+                <img className='image' alt='nutrition' src={imageUtil('/images/sun.jpg')}></img>
+                <img className='image-hover' alt='nutrition' src={imageUtil('/images/moon.jpg')}></img>
+              </div>
             : 
               null
             } 
@@ -84,21 +73,12 @@ export const HoverCards = () => {
           <div
             ref={ref} 
             className='hover-cards__card' 
-            onMouseOver={() => setHover('nutrition')}
-            onMouseOut={() => setHover('')}
           >
             {inView ? 
-              <img 
-                alt='nutrition' 
-                src={(hover === 'nutrition' ? 
-                  imageUtil('/images/nutrition2.jpg') 
-                  : 
-                  imageUtil('/images/nutrition.jpg')
-                )}
-                style={{
-                  transition: 'all 0.5s'
-                }} 
-              />
+              <div className='image-wrapper'>
+                <img className='image' alt='nutrition' src={imageUtil('/images/nutrition.jpg')}></img>
+                <img className='image-hover' alt='nutrition' src={imageUtil('/images/nutrition2.jpg')}></img>
+              </div>
             : 
               null
             } 

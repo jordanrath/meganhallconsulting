@@ -7,7 +7,7 @@ export const Schedule = () => {
 
   return (
     <>
-      <div className='schedule-container'>
+      <div className='schedule-container' data-aos='zoom-in'>
         <iframe 
           src="https://app.acuityscheduling.com/schedule.php?owner=22267278" 
           title="Schedule Appointment" 
