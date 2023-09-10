@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer';
 const GettingStarted = () => {
   const [isClicked, setIsClicked] = useState(0);
   const [isDesktop, setisDesktop] = useState(window.innerWidth > 601);
-  // const ref = useRef(null);
+  const imgRef = useRef(null);
 
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -17,7 +17,7 @@ const GettingStarted = () => {
 
   const handleClick = (divClicked) => ()  => { 
     setIsClicked(divClicked);
-    return (!isDesktop ? ref.current?.scrollIntoView({ behavior: 'smooth' }) : null)
+    return (!isDesktop ? imgRef.current?.scrollIntoView({ behavior: 'smooth' }) : null)
   };
 
   const updateMediaQuery = () => {
@@ -46,7 +46,7 @@ const GettingStarted = () => {
           </div>
         </div>
         </div>
-          <div className='expanding-card__container'>
+          <div ref={imgRef} className='expanding-card__container'>
           <div 
             id='0' 
             ref={ref} 
